@@ -4,34 +4,42 @@ const municipios = [
   'Villarcayo',
   'Medina de Pomar',
   'Trespaderne',
-  'Merindad de Río Ubierna',
   'Valle de Mena',
-  'Berberana',
-  'Merindad de Cuesta Urria',
   'Merindad de Sotoscueva',
-  'Y más municipios de Las Merindades',
+  'Merindad de Cuesta Urria',
+  'Merindad de Río Ubierna',
+  'Berberana',
+  'Merindad de Montija',
+  'Alfoz de Santa Gadea',
+  'Y municipios cercanos',
 ];
 ---
 
 <section id="zona" class="py-20 md:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-      <!-- Left: text -->
+    <div class="text-center mb-16">
+      <span class="inline-block text-eco-600 font-semibold text-sm uppercase tracking-widest mb-3">Dónde trabajamos</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Zona de Trabajo</h2>
+      <p class="text-lg text-gray-500 max-w-3xl mx-auto">
+        Operamos en <strong class="text-gray-800">Espinosa de los Monteros</strong> y en toda la comarca de <strong class="text-gray-800">Las Merindades</strong>, en la provincia de Burgos. Si tienes dudas sobre si llegamos a tu zona, no te preocupes: contáctanos y te lo confirmamos enseguida.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+
+      <!-- Left: text + list -->
       <div>
-        <span class="inline-block text-eco-600 font-semibold text-sm uppercase tracking-widest mb-3">Dónde trabajamos</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">Zona de Trabajo</h2>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          Prestamos servicio en <strong class="text-gray-900">Espinosa de los Monteros</strong> y toda la comarca de <strong class="text-gray-900">Las Merindades</strong>, en la provincia de Burgos.
+        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+          Las Merindades es una de las comarcas más extensas y bellas de Castilla y León, con una gran variedad de municipios, pueblos y núcleos rurales. Sabemos lo importante que es contar con un servicio de limpieza de confianza cerca de casa, por eso cubrimos toda la comarca y sus alrededores.
         </p>
         <p class="text-gray-500 leading-relaxed mb-8">
-          ¿No sabes si llegamos a tu zona? Llámanos o escríbenos por WhatsApp — lo comprobamos de inmediato y te damos respuesta enseguida.
+          Tanto si vives en una gran localidad como Villarcayo o Medina de Pomar, como en un pequeño pueblo de la montaña cerca de Espinosa de los Monteros, estamos aquí para ti. Consúltanos sin compromiso.
         </p>
 
-        <!-- Municipality list -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
           {municipios.map(m => (
-            <div class="flex items-center gap-2 text-gray-600 text-sm">
+            <div class="flex items-center gap-2 text-gray-600 text-sm bg-gray-50 rounded-lg px-3 py-2.5">
               <svg class="w-4 h-4 text-eco-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
               </svg>
@@ -40,52 +48,51 @@ const municipios = [
           ))}
         </div>
 
-        <a
-          href="tel:+34605984005"
-          class="inline-flex items-center gap-2 bg-eco-600 hover:bg-eco-700 text-white px-7 py-3.5 rounded-xl font-bold transition-colors duration-200 shadow-sm"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-          Consultar mi zona
-        </a>
-      </div>
-
-      <!-- Right: map card -->
-      <div class="relative">
-        <div class="bg-eco-50 rounded-3xl p-8 border border-eco-100">
-          <!-- Stylized map with SVG -->
-          <div class="aspect-square max-w-sm mx-auto relative">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-              <div class="bg-eco-600 text-white rounded-2xl px-6 py-4 shadow-xl mb-4">
-                <div class="text-2xl font-extrabold">Las Merindades</div>
-                <div class="text-eco-200 text-sm mt-1">Burgos, Castilla y León</div>
-              </div>
-              <div class="bg-white rounded-xl px-4 py-3 shadow-md border border-eco-100">
-                <div class="flex items-center gap-2 text-eco-700">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="font-semibold text-sm">Espinosa de los Monteros</span>
-                </div>
-              </div>
-            </div>
-            <!-- Decorative circles -->
-            <div class="absolute top-4 left-4 w-20 h-20 bg-eco-200 rounded-full opacity-30"></div>
-            <div class="absolute bottom-4 right-4 w-32 h-32 bg-eco-300 rounded-full opacity-20"></div>
-            <div class="absolute top-1/3 right-8 w-12 h-12 bg-eco-400 rounded-full opacity-25"></div>
-            <div class="absolute bottom-1/3 left-8 w-16 h-16 bg-eco-100 rounded-full opacity-40 border-2 border-eco-300"></div>
-          </div>
-
-          <div class="mt-6 text-center">
-            <p class="text-eco-700 font-medium text-sm">
-              Atendemos toda la comarca de Las Merindades y alrededores
-            </p>
-            <p class="text-eco-500 text-xs mt-1">¿Tienes dudas? ¡Llámanos!</p>
-          </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:+34605984005"
+            class="inline-flex items-center justify-center gap-2 bg-eco-600 hover:bg-eco-700 text-white px-7 py-3.5 rounded-xl font-bold transition-colors duration-200 shadow-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Consultar mi zona
+          </a>
+          <a href="https://wa.me/34605984005?text=Hola%2C%20quer%C3%ADa%20saber%20si%20cubr%C3%ADs%20mi%20zona"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-7 py-3.5 rounded-xl font-bold transition-colors duration-200">
+            Preguntar por WhatsApp
+          </a>
         </div>
       </div>
 
+      <!-- Right: photo slot + map card -->
+      <div class="space-y-5">
+        <!-- Photo slot: landscape of Merindades -->
+        <div class="w-full aspect-video rounded-2xl bg-gray-100 border-2 border-dashed border-gray-300 hover:border-eco-400 hover:bg-eco-50 transition-colors duration-300 flex flex-col items-center justify-center group">
+          <svg class="w-12 h-12 text-gray-400 group-hover:text-eco-500 mb-3 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          <p class="text-gray-500 font-semibold group-hover:text-eco-700 transition-colors">Foto: Las Merindades</p>
+          <p class="text-gray-400 text-sm mt-1">Paisaje o pueblo de la zona</p>
+        </div>
+
+        <!-- Info card -->
+        <div class="bg-eco-50 border border-eco-100 rounded-2xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-eco-600 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-eco-800 text-lg mb-1">Espinosa de los Monteros</h3>
+              <p class="text-eco-700 text-sm leading-relaxed">
+                Nuestra base de operaciones está en Espinosa de los Monteros, una localidad histórica al norte de Burgos, en el corazón de Las Merindades. Desde aquí nos desplazamos a toda la comarca.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>

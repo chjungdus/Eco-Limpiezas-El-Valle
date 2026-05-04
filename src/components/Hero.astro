@@ -2,103 +2,119 @@
 ---
 
 <section class="relative overflow-hidden bg-gradient-to-br from-eco-900 via-eco-800 to-eco-700 text-white">
-  <!-- Decorative background pattern -->
+  <!-- Background dot pattern -->
   <div class="absolute inset-0 opacity-10" aria-hidden="true">
     <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" fill="none">
       <defs>
-        <pattern id="grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+        <pattern id="grid" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
           <circle cx="1" cy="1" r="0.5" fill="white"/>
         </pattern>
       </defs>
       <rect width="100" height="100" fill="url(#grid)"/>
     </svg>
   </div>
-
-  <!-- Large decorative leaf -->
-  <div class="absolute -right-20 -top-20 w-96 h-96 opacity-5" aria-hidden="true">
-    <svg viewBox="0 0 200 200" fill="white">
-      <path d="M100 10C100 10 20 60 20 120a80 80 0 00160 0C180 60 100 10 100 10z"/>
-    </svg>
-  </div>
-  <div class="absolute -left-10 bottom-0 w-64 h-64 opacity-5" aria-hidden="true">
-    <svg viewBox="0 0 200 200" fill="white">
-      <path d="M100 10C100 10 20 60 20 120a80 80 0 00160 0C180 60 100 10 100 10z"/>
-    </svg>
+  <div class="absolute -right-24 -top-24 w-[500px] h-[500px] opacity-5 pointer-events-none" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="white"><path d="M100 10C100 10 20 60 20 120a80 80 0 00160 0C180 60 100 10 100 10z"/></svg>
   </div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-36">
-    <div class="max-w-3xl">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-      <!-- Badge -->
-      <div class="inline-flex items-center gap-2 bg-eco-600/40 border border-eco-400/30 text-eco-100 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-        <svg class="w-4 h-4 text-eco-300" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M17.778 8.222A8 8 0 1 0 2.222 17.778C3.444 16 5 13 5 10c0-1.333.667-3 2-4 0 2 1 4 3 5 0-2 1-4 3-4-1 2-1 4 0 5 1-1 2-3 2-5 1.333 1.333 2 3 2 5 0 1-.5 2.5-2 4 2-1 3.5-3 3.778-6.778z" clip-rule="evenodd"/>
-        </svg>
-        Empresa de limpieza ecológica · Merindades, Burgos
+      <!-- Left: text -->
+      <div>
+        <div class="inline-flex items-center gap-2 bg-eco-600/40 border border-eco-400/30 text-eco-100 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+          <svg class="w-4 h-4 text-eco-300" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M17.778 8.222A8 8 0 1 0 2.222 17.778C3.444 16 5 13 5 10c0-1.333.667-3 2-4 0 2 1 4 3 5 0-2 1-4 3-4-1 2-1 4 0 5 1-1 2-3 2-5 1.333 1.333 2 3 2 5 0 1-.5 2.5-2 4 2-1 3.5-3 3.778-6.778z" clip-rule="evenodd"/>
+          </svg>
+          Empresa de limpieza ecológica · Merindades, Burgos
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white">
+          Tu hogar y negocio,<br/>
+          <span class="text-eco-300">siempre impecables</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-eco-100 leading-relaxed mb-6">
+          Somos una empresa de limpieza profesional con sede en <strong class="text-white">Espinosa de los Monteros</strong>, dando servicio a toda la comarca de <strong class="text-white">Las Merindades</strong> en Burgos.
+        </p>
+        <p class="text-eco-200 leading-relaxed mb-10">
+          Trabajamos tanto para particulares como para empresas, con un trato cercano, horarios adaptados a tus necesidades y el compromiso de usar siempre productos respetuosos con el medioambiente.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="tel:+34605984005"
+            class="inline-flex items-center justify-center gap-3 bg-white text-eco-800 hover:bg-eco-50 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Llamar ahora
+          </a>
+          <a href="https://wa.me/34605984005?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20de%20limpieza"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd59] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-5 pt-4 border-t border-eco-700">
+          <div class="flex items-center gap-2 text-eco-200 text-sm">
+            <svg class="w-5 h-5 text-eco-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Particulares y empresas
+          </div>
+          <div class="flex items-center gap-2 text-eco-200 text-sm">
+            <svg class="w-5 h-5 text-eco-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Horarios flexibles
+          </div>
+          <div class="flex items-center gap-2 text-eco-200 text-sm">
+            <svg class="w-5 h-5 text-eco-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Productos ecológicos
+          </div>
+          <div class="flex items-center gap-2 text-eco-200 text-sm">
+            <svg class="w-5 h-5 text-eco-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Presupuesto gratuito
+          </div>
+        </div>
       </div>
 
-      <!-- Headline -->
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white">
-        Tu hogar y negocio,<br/>
-        <span class="text-eco-300">siempre impecables</span>
-      </h1>
-
-      <!-- Subheadline -->
-      <p class="text-lg sm:text-xl text-eco-100 leading-relaxed mb-10 max-w-2xl">
-        Servicio de limpieza profesional en <strong class="text-white">Espinosa de los Monteros</strong> y toda la comarca de <strong class="text-white">Las Merindades</strong>. Para particulares y empresas, con horarios flexibles y productos ecológicos.
-      </p>
-
-      <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a
-          href="tel:+34605984005"
-          class="inline-flex items-center justify-center gap-3 bg-white text-eco-800 hover:bg-eco-50 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-          Llamar ahora
-        </a>
-        <a
-          href="https://wa.me/34605984005?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20de%20limpieza"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd59] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200"
-        >
-          <!-- WhatsApp icon -->
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          WhatsApp
-        </a>
-      </div>
-
-      <!-- Trust indicators -->
-      <div class="mt-12 flex flex-wrap gap-6">
-        <div class="flex items-center gap-2 text-eco-200 text-sm">
-          <svg class="w-5 h-5 text-eco-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Para particulares y empresas
-        </div>
-        <div class="flex items-center gap-2 text-eco-200 text-sm">
-          <svg class="w-5 h-5 text-eco-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Horarios flexibles
-        </div>
-        <div class="flex items-center gap-2 text-eco-200 text-sm">
-          <svg class="w-5 h-5 text-eco-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Productos ecológicos
+      <!-- Right: photo slot -->
+      <div class="hidden lg:block">
+        <div class="relative">
+          <!-- Main photo slot -->
+          <div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-eco-700/40 border-2 border-dashed border-eco-400/40 flex flex-col items-center justify-center group">
+            <svg class="w-16 h-16 text-eco-400/60 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <p class="text-eco-300/70 font-semibold text-lg">Foto Principal</p>
+            <p class="text-eco-400/50 text-sm mt-1">Equipo o trabajo destacado</p>
+          </div>
+          <!-- Floating badge -->
+          <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3">
+            <div class="w-12 h-12 bg-eco-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-eco-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M17.778 8.222A8 8 0 1 0 2.222 17.778C3.444 16 5 13 5 10c0-1.333.667-3 2-4 0 2 1 4 3 5 0-2 1-4 3-4-1 2-1 4 0 5 1-1 2-3 2-5 1.333 1.333 2 3 2 5 0 1-.5 2.5-2 4 2-1 3.5-3 3.778-6.778z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 text-sm">100% Ecológico</p>
+              <p class="text-gray-500 text-xs">Productos sostenibles</p>
+            </div>
+          </div>
+          <!-- Second small photo slot -->
+          <div class="absolute -right-5 top-8 w-36 h-36 rounded-2xl shadow-xl bg-eco-600/30 border-2 border-dashed border-eco-400/40 flex flex-col items-center justify-center">
+            <svg class="w-8 h-8 text-eco-300/60 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <p class="text-eco-300/60 text-xs font-medium text-center px-2">Foto equipo</p>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- Bottom wave -->
   <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none" aria-hidden="true">
     <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" class="w-full h-10 md:h-14">
       <path d="M0 60 L0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 Z" fill="white"/>
