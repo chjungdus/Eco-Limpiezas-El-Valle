@@ -1,0 +1,81 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Eco-Limpiezas El Valle | Limpieza Profesional en Merindades, Burgos',
+  description = 'Empresa de limpieza profesional en Espinosa de los Monteros y la comarca de Las Merindades (Burgos). Limpiezas domésticas, fin de obra, tapicerías y cristales. Horarios flexibles y atención personalizada.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Eco-Limpiezas El Valle",
+        "telephone": "+34605984005",
+        "areaServed": [
+          "Espinosa de los Monteros",
+          "Las Merindades",
+          "Burgos"
+        ],
+        "serviceType": [
+          "Limpieza doméstica",
+          "Limpieza de fin de obra",
+          "Limpieza de tapicerías",
+          "Limpieza de cristales"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+34605984005",
+          "contactType": "customer service",
+          "availableLanguage": "Spanish"
+        },
+        "employee": {
+          "@type": "Person",
+          "name": "Davinia Gómez Baranda"
+        }
+      }
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        font-family: 'Inter', system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 antialiased">
+    <slot />
+  </body>
+</html>
