@@ -1,19 +1,42 @@
 ---
+import type { Lang } from '../i18n/translations';
+import { t } from '../i18n/translations';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const tr = t(lang);
+
 const navLinks = [
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#nosotros', label: 'Nosotros' },
-  { href: '#referencias', label: 'Referencias' },
-  { href: '#zona', label: 'Zona' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '#servicios', label: tr.navServices },
+  { href: '#nosotros', label: tr.navAbout },
+  { href: '#referencias', label: tr.navReferences },
+  { href: '#zona', label: tr.navZone },
+  { href: '#contacto', label: tr.navContact },
 ];
+
+const langPaths: Record<Lang, string> = {
+  es: '/',
+  en: '/en/',
+  de: '/de/',
+};
 ---
+
+<div class="bg-eco-800 text-eco-100 text-xs py-2 hidden md:block">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <span>{tr.headerTagline}</span>
+    <div class="flex items-center gap-6">
+      <span>{tr.headerZone}</span>
+      <a href="tel:+34605984005" class="hover:text-white transition-colors font-medium">+34 605 984 005</a>
+    </div>
+  </div>
+</div>
 
 <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
 
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-3">
+      <a href={langPaths[lang]} class="flex items-center gap-3">
         <div class="w-8 h-8 bg-eco-700 flex items-center justify-center">
           <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M17.778 8.222A8 8 0 1 0 2.222 17.778C3.444 16 5 13 5 10c0-1.333.667-3 2-4 0 2 1 4 3 5 0-2 1-4 3-4-1 2-1 4 0 5 1-1 2-3 2-5 1.333 1.333 2 3 2 5 0 1-.5 2.5-2 4 2-1 3.5-3 3.778-6.778z" clip-rule="evenodd"/>
@@ -29,14 +52,26 @@ const navLinks = [
       <nav class="hidden lg:flex items-center gap-8">
         {navLinks.map(link => (
           <a href={link.href}
-            class="text-gray-600 hover:text-eco-700 font-medium text-sm transition-colors duration-150 uppercase tracking-wide text-xs">
+            class="text-gray-600 hover:text-eco-700 font-medium transition-colors duration-150 uppercase tracking-wide text-xs">
             {link.label}
           </a>
         ))}
       </nav>
 
-      <!-- CTA -->
-      <div class="hidden md:flex items-center gap-3">
+      <!-- Right: Lang switcher + CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Language switcher -->
+        <div class="flex items-center border border-gray-200 divide-x divide-gray-200 text-xs font-bold">
+          {(['es', 'en', 'de'] as Lang[]).map(l => (
+            <a
+              href={langPaths[l]}
+              class={`px-3 py-1.5 transition-colors duration-150 ${lang === l ? 'bg-eco-700 text-white' : 'text-gray-500 hover:text-eco-700 hover:bg-gray-50'}`}
+            >
+              {l.toUpperCase()}
+            </a>
+          ))}
+        </div>
+        <!-- Phone CTA -->
         <a href="tel:+34605984005"
           class="flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-5 py-2.5 font-semibold text-sm transition-colors duration-150">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,24 +97,25 @@ const navLinks = [
               {link.label}
             </a>
           ))}
-          <a href="tel:+34605984005"
-            class="flex items-center gap-2 bg-eco-700 text-white px-4 py-2.5 font-semibold text-sm w-fit">
-            605 984 005
-          </a>
+          <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+            <div class="flex items-center border border-gray-200 divide-x divide-gray-200 text-xs font-bold">
+              {(['es', 'en', 'de'] as Lang[]).map(l => (
+                <a
+                  href={langPaths[l]}
+                  class={`px-3 py-1.5 ${lang === l ? 'bg-eco-700 text-white' : 'text-gray-500 hover:text-eco-700'}`}
+                >
+                  {l.toUpperCase()}
+                </a>
+              ))}
+            </div>
+            <a href="tel:+34605984005"
+              class="flex items-center gap-2 bg-eco-700 text-white px-4 py-2 font-semibold text-sm">
+              605 984 005
+            </a>
+          </div>
         </div>
       </details>
 
     </div>
   </div>
 </header>
-
-<!-- Top info bar -->
-<div class="bg-eco-800 text-eco-100 text-xs py-2 hidden md:block">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-    <span>Empresa de limpieza profesional en Las Merindades, Burgos</span>
-    <div class="flex items-center gap-6">
-      <span>Espinosa de los Monteros y comarca</span>
-      <a href="tel:+34605984005" class="hover:text-white transition-colors font-medium">+34 605 984 005</a>
-    </div>
-  </div>
-</div>

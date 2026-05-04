@@ -12,21 +12,23 @@ import FAQ from '../components/FAQ.astro';
 import ZonaDeTrabajo from '../components/ZonaDeTrabajo.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
+
+const lang = 'es' as const;
 ---
 
-<Layout>
-  <Header />
+<Layout lang={lang}>
+  <Header lang={lang} />
   <main>
-    <Hero />
-    <Servicios />
-    <SobreNosotros />
-    <PorQueElegirnos />
-    <ComoTrabajamos />
-    <Referencias />
-    <Testimoniales />
-    <FAQ />
-    <ZonaDeTrabajo />
-    <Contacto />
+    <Hero lang={lang} />
+    <Servicios lang={lang} />
+    <SobreNosotros lang={lang} />
+    <PorQueElegirnos lang={lang} />
+    <ComoTrabajamos lang={lang} />
+    <Referencias lang={lang} />
+    <Testimoniales lang={lang} />
+    <FAQ lang={lang} />
+    <ZonaDeTrabajo lang={lang} />
+    <Contacto lang={lang} />
   </main>
-  <Footer />
+  <Footer lang={lang} />
 </Layout>

@@ -1,46 +1,50 @@
 ---
-const faqs = [
-  {
-    q: '¿En qué zonas prestáis servicio?',
-    a: 'Trabajamos en Espinosa de los Monteros y en toda la comarca de Las Merindades, en la provincia de Burgos. Esto incluye municipios como Villarcayo, Medina de Pomar, Trespaderne, Valle de Mena, Merindad de Sotoscueva, Merindad de Cuesta Urria y todos los núcleos de la comarca. Si tienes dudas sobre si llegamos a tu zona concreta, no dudes en consultarnos.',
-  },
-  {
-    q: '¿Cómo puedo solicitar un presupuesto?',
-    a: 'El proceso es muy sencillo: puedes llamarnos directamente al 605 984 005 o escribirnos por WhatsApp. Cuéntanos qué tipo de limpieza necesitas, las características del espacio y la frecuencia aproximada que buscas, y te enviaremos un presupuesto personalizado. El presupuesto es siempre gratuito y sin ningún tipo de compromiso.',
-  },
-  {
-    q: '¿Qué horarios tenéis disponibles?',
-    a: 'Trabajamos con horarios totalmente flexibles, adaptados a las necesidades de cada cliente. Podemos realizar servicios por la mañana, por la tarde, los fines de semana e incluso en festivos cuando la situación lo requiere. Nuestro objetivo es que el servicio se ajuste a tu vida y no al revés.',
-  },
-  {
-    q: '¿Qué productos utilizáis?',
-    a: 'Utilizamos exclusivamente productos de limpieza ecológicos, biodegradables y sin componentes tóxicos. Todos los productos que empleamos cuentan con certificación medioambiental y son seguros para personas, niños y animales de compañía. Esta es una de nuestras señas de identidad y un compromiso que mantenemos en todos los servicios, independientemente del tipo de cliente o espacio.',
-  },
-  {
-    q: '¿Tengo que facilitar yo los productos de limpieza?',
-    a: 'No. Eco-Limpiezas El Valle acude siempre con todo el material y productos necesarios para realizar el trabajo. El cliente no necesita disponer de nada. Si por alguna razón tienes preferencia por el uso de algún producto concreto, podemos hablarlo, pero en ningún caso es un requisito.',
-  },
-  {
-    q: '¿Realizáis limpiezas de fin de obra para particulares?',
-    a: 'Sí, realizamos limpiezas de fin de obra tanto para particulares como para empresas constructoras o promotoras. Este servicio está disponible tras cualquier tipo de reforma o construcción: reformas de cocinas o baños, rehabilitaciones integrales, obras de nueva construcción, instalaciones de suelos o azulejos, pinturas, etc.',
-  },
-  {
-    q: '¿Ofrecéis servicio de limpieza para empresas?',
-    a: 'Sí. Atendemos tanto a particulares como a todo tipo de empresas y negocios: oficinas, locales comerciales, establecimientos hosteleros, comunidades de vecinos, naves industriales y cualquier tipo de espacio profesional. Para empresas podemos establecer un contrato de mantenimiento con frecuencia semanal, quincenal o mensual según lo que necesite el negocio.',
-  },
-  {
-    q: '¿Qué pasa si no estoy satisfecho con el resultado?',
-    a: 'Si por cualquier razón el resultado no cumple con lo acordado, lo solucionamos sin coste adicional. Nuestro objetivo es que el cliente quede completamente satisfecho con el trabajo. Antes de cerrar cualquier servicio hacemos una revisión final del resultado para asegurarnos de que todo está en orden.',
-  },
-  {
-    q: '¿Con cuánta antelación hay que solicitar el servicio?',
-    a: 'Depende de la disponibilidad en cada momento. En general intentamos adaptarnos a las necesidades del cliente con la mayor rapidez posible. Para servicios urgentes, lo mejor es llamarnos directamente y ver qué opciones tenemos disponibles. Para servicios regulares, recomendamos contactar con al menos unos días de antelación para organizar el calendario de la mejor manera.',
-  },
-  {
-    q: '¿Emitís factura?',
-    a: 'Sí. Emitimos factura por todos los servicios que realizamos. Si eres una empresa o autónomo y necesitas la factura con tu NIF o CIF para la deducción del gasto, no hay ningún problema. Simplemente indícalo en el momento de solicitar el servicio.',
-  },
-];
+import type { Lang } from '../i18n/translations';
+import { t } from '../i18n/translations';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const tr = t(lang);
+
+const faqs = {
+  es: [
+    { q: '¿En qué zonas prestáis servicio?', a: 'Trabajamos en Espinosa de los Monteros y en toda la comarca de Las Merindades, en la provincia de Burgos. Esto incluye municipios como Villarcayo, Medina de Pomar, Trespaderne, Valle de Mena, Merindad de Sotoscueva, Merindad de Cuesta Urria y todos los núcleos de la comarca. Si tienes dudas sobre si llegamos a tu zona concreta, no dudes en consultarnos.' },
+    { q: '¿Cómo puedo solicitar un presupuesto?', a: 'El proceso es muy sencillo: puedes llamarnos directamente al 605 984 005 o escribirnos por WhatsApp. Cuéntanos qué tipo de limpieza necesitas, las características del espacio y la frecuencia aproximada que buscas, y te enviaremos un presupuesto personalizado. El presupuesto es siempre gratuito y sin ningún tipo de compromiso.' },
+    { q: '¿Qué horarios tenéis disponibles?', a: 'Trabajamos con horarios totalmente flexibles, adaptados a las necesidades de cada cliente. Podemos realizar servicios por la mañana, por la tarde, los fines de semana e incluso en festivos cuando la situación lo requiere. Nuestro objetivo es que el servicio se ajuste a tu vida y no al revés.' },
+    { q: '¿Qué productos utilizáis?', a: 'Utilizamos exclusivamente productos de limpieza ecológicos, biodegradables y sin componentes tóxicos. Todos los productos que empleamos cuentan con certificación medioambiental y son seguros para personas, niños y animales de compañía. Esta es una de nuestras señas de identidad y un compromiso que mantenemos en todos los servicios, independientemente del tipo de cliente o espacio.' },
+    { q: '¿Tengo que facilitar yo los productos de limpieza?', a: 'No. Eco-Limpiezas El Valle acude siempre con todo el material y productos necesarios para realizar el trabajo. El cliente no necesita disponer de nada. Si por alguna razón tienes preferencia por el uso de algún producto concreto, podemos hablarlo, pero en ningún caso es un requisito.' },
+    { q: '¿Realizáis limpiezas de fin de obra para particulares?', a: 'Sí, realizamos limpiezas de fin de obra tanto para particulares como para empresas constructoras o promotoras. Este servicio está disponible tras cualquier tipo de reforma o construcción: reformas de cocinas o baños, rehabilitaciones integrales, obras de nueva construcción, instalaciones de suelos o azulejos, pinturas, etc.' },
+    { q: '¿Ofrecéis servicio de limpieza para empresas?', a: 'Sí. Atendemos tanto a particulares como a todo tipo de empresas y negocios: oficinas, locales comerciales, establecimientos hosteleros, comunidades de vecinos, naves industriales y cualquier tipo de espacio profesional. Para empresas podemos establecer un contrato de mantenimiento con frecuencia semanal, quincenal o mensual según lo que necesite el negocio.' },
+    { q: '¿Qué pasa si no estoy satisfecho con el resultado?', a: 'Si por cualquier razón el resultado no cumple con lo acordado, lo solucionamos sin coste adicional. Nuestro objetivo es que el cliente quede completamente satisfecho con el trabajo. Antes de cerrar cualquier servicio hacemos una revisión final del resultado para asegurarnos de que todo está en orden.' },
+    { q: '¿Con cuánta antelación hay que solicitar el servicio?', a: 'Depende de la disponibilidad en cada momento. En general intentamos adaptarnos a las necesidades del cliente con la mayor rapidez posible. Para servicios urgentes, lo mejor es llamarnos directamente y ver qué opciones tenemos disponibles. Para servicios regulares, recomendamos contactar con al menos unos días de antelación para organizar el calendario de la mejor manera.' },
+    { q: '¿Emitís factura?', a: 'Sí. Emitimos factura por todos los servicios que realizamos. Si eres una empresa o autónomo y necesitas la factura con tu NIF o CIF para la deducción del gasto, no hay ningún problema. Simplemente indícalo en el momento de solicitar el servicio.' },
+  ],
+  en: [
+    { q: 'What areas do you serve?', a: 'We work in Espinosa de los Monteros and throughout the comarca of Las Merindades, in the province of Burgos. This includes municipalities such as Villarcayo, Medina de Pomar, Trespaderne, Valle de Mena, Merindad de Sotoscueva, Merindad de Cuesta Urria and all townships in the comarca. If you are not sure whether we cover your specific area, please do not hesitate to contact us.' },
+    { q: 'How can I request a quote?', a: 'The process is very simple: you can call us directly on 605 984 005 or message us on WhatsApp. Tell us what type of cleaning you need, the characteristics of the space and the approximate frequency you are looking for, and we will send you a personalised quote. The quote is always free and comes with no commitment of any kind.' },
+    { q: 'What hours are you available?', a: 'We work completely flexible hours, adapted to each client\'s needs. We can carry out services in the morning, afternoon, at weekends and even on bank holidays when required. Our aim is for the service to fit around your life, not the other way around.' },
+    { q: 'What products do you use?', a: 'We exclusively use ecological cleaning products, biodegradable and free from toxic components. All the products we use have environmental certification and are safe for people, children and pets. This is one of our hallmarks and a commitment we maintain across all services, regardless of the type of client or space.' },
+    { q: 'Do I need to provide cleaning products?', a: 'No. Eco-Limpiezas El Valle always comes with all the materials and products needed to do the job. The client does not need to provide anything. If for any reason you have a preference for a specific product, we can discuss it, but it is never a requirement.' },
+    { q: 'Do you carry out post-construction cleaning for private clients?', a: 'Yes, we carry out post-construction cleaning for both private clients and building companies. This service is available after any type of renovation or construction: kitchen or bathroom refits, full refurbishments, new construction, flooring or tiling work, painting, etc.' },
+    { q: 'Do you offer cleaning services for businesses?', a: 'Yes. We serve both private individuals and all types of businesses: offices, commercial premises, hospitality establishments, residents\' associations, industrial units and any type of professional space. For businesses we can establish a maintenance contract with weekly, fortnightly or monthly frequency according to the needs of the business.' },
+    { q: 'What if I am not satisfied with the result?', a: 'If for any reason the result does not meet what was agreed, we will remedy it at no additional charge. Our aim is for the client to be completely satisfied with the work. Before closing any service we carry out a final check of the result to make sure everything is in order.' },
+    { q: 'How far in advance do I need to book?', a: 'It depends on availability at any given time. In general we try to adapt to the client\'s needs as quickly as possible. For urgent services, it is best to call us directly to see what options are available. For regular services, we recommend contacting us at least a few days in advance to organise the schedule in the best way.' },
+    { q: 'Do you issue invoices?', a: 'Yes. We issue invoices for all the services we carry out. If you are a company or self-employed and need the invoice with your tax number for expense deduction, that is no problem at all. Simply indicate this when requesting the service.' },
+  ],
+  de: [
+    { q: 'In welchen Gebieten sind Sie tätig?', a: 'Wir arbeiten in Espinosa de los Monteros und in der gesamten Comarca Las Merindades in der Provinz Burgos. Dazu gehören Gemeinden wie Villarcayo, Medina de Pomar, Trespaderne, Valle de Mena, Merindad de Sotoscueva, Merindad de Cuesta Urria und alle Ortschaften der Comarca. Falls Sie nicht sicher sind, ob wir Ihr konkretes Gebiet abdecken, fragen Sie uns gerne.' },
+    { q: 'Wie kann ich ein Angebot anfordern?', a: 'Der Vorgang ist ganz einfach: Sie können uns direkt unter 605 984 005 anrufen oder uns per WhatsApp schreiben. Teilen Sie uns mit, welche Art von Reinigung Sie benötigen, die Merkmale des Raums und die ungefähre Häufigkeit, und wir senden Ihnen ein individuelles Angebot zu. Das Angebot ist stets kostenlos und völlig unverbindlich.' },
+    { q: 'Welche Arbeitszeiten haben Sie?', a: 'Wir arbeiten mit vollständig flexiblen Zeiten, die an die Bedürfnisse jedes Kunden angepasst sind. Wir können Dienstleistungen morgens, nachmittags, an Wochenenden und auch an Feiertagen durchführen. Unser Ziel ist, dass sich der Service nach Ihrem Leben richtet und nicht umgekehrt.' },
+    { q: 'Welche Produkte verwenden Sie?', a: 'Wir verwenden ausschließlich ökologische Reinigungsprodukte, biologisch abbaubar und frei von Giftstoffen. Alle unsere Produkte besitzen eine Umweltzertifizierung und sind sicher für Menschen, Kinder und Haustiere. Dies ist eines unserer Markenzeichen und ein Engagement, das wir bei allen Dienstleistungen aufrechterhalten.' },
+    { q: 'Muss ich die Reinigungsprodukte selbst bereitstellen?', a: 'Nein. Eco-Limpiezas El Valle kommt stets mit allem erforderlichen Material und allen Produkten für die Arbeit. Der Kunde muss nichts bereitstellen. Wenn Sie aus irgendeinem Grund ein bestimmtes Produkt bevorzugen, können wir darüber sprechen, aber es ist keine Voraussetzung.' },
+    { q: 'Führen Sie Baureinigung für Privatpersonen durch?', a: 'Ja, wir führen Baureinigung sowohl für Privatpersonen als auch für Bauunternehmen durch. Dieser Service ist nach jeder Art von Umbau oder Baumaßnahme verfügbar: Küchen- oder Badezimmerrenovierungen, Komplettmodernisierungen, Neubauten, Boden- oder Fliesenarbeiten, Malerarbeiten usw.' },
+    { q: 'Bieten Sie Reinigungsdienstleistungen für Unternehmen an?', a: 'Ja. Wir betreuen sowohl Privatpersonen als auch alle Arten von Unternehmen: Büros, Gewerbeflächen, Gastronomiebetriebe, Wohnungseigentümergemeinschaften, Industriehallen und alle Arten von Gewerberäumen. Für Unternehmen können wir einen Wartungsvertrag mit wöchentlicher, vierzehntägiger oder monatlicher Häufigkeit abschließen.' },
+    { q: 'Was passiert, wenn ich mit dem Ergebnis nicht zufrieden bin?', a: 'Wenn das Ergebnis aus irgendeinem Grund nicht dem Vereinbarten entspricht, beheben wir dies ohne zusätzliche Kosten. Unser Ziel ist, dass der Kunde vollständig mit der Arbeit zufrieden ist. Vor Abschluss jeder Dienstleistung führen wir eine abschließende Überprüfung durch, um sicherzustellen, dass alles in Ordnung ist.' },
+    { q: 'Wie weit im Voraus muss ich buchen?', a: 'Das hängt von der jeweiligen Verfügbarkeit ab. Im Allgemeinen versuchen wir, uns so schnell wie möglich an die Bedürfnisse des Kunden anzupassen. Für dringende Dienste rufen Sie uns am besten direkt an. Für regelmäßige Dienste empfehlen wir, uns mindestens ein paar Tage im Voraus zu kontaktieren.' },
+    { q: 'Stellen Sie Rechnungen aus?', a: 'Ja. Wir stellen für alle durchgeführten Dienstleistungen Rechnungen aus. Wenn Sie ein Unternehmen oder Selbstständiger sind und die Rechnung mit Ihrer Steuernummer für den Betriebskostenabzug benötigen, ist das kein Problem. Geben Sie dies einfach beim Anfordern des Dienstes an.' },
+  ],
+};
+
+const currentFaqs = faqs[lang];
 ---
 
 <section class="py-20 md:py-28 bg-gray-50">
@@ -48,29 +52,25 @@ const faqs = [
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-      <!-- Left: header -->
       <div class="lg:col-span-1">
         <div class="sticky top-28">
           <div class="border-l-4 border-eco-600 pl-6 mb-8">
-            <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Dudas frecuentes</span>
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+            <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">{tr.sectionFaqLabel}</span>
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">{tr.sectionFaqTitle}</h2>
           </div>
-          <p class="text-gray-500 leading-relaxed mb-8">
-            Recogemos aquí las preguntas que nos hacen con más frecuencia nuestros clientes. Si no encuentras respuesta a tu duda, no dudes en contactarnos directamente.
-          </p>
+          <p class="text-gray-500 leading-relaxed mb-8">{tr.sectionFaqSubtitle}</p>
           <a href="tel:+34605984005"
             class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-6 py-3 font-bold text-sm transition-colors duration-150">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
-            Hacer una consulta
+            {tr.faqAskBtn}
           </a>
         </div>
       </div>
 
-      <!-- Right: FAQ list -->
       <div class="lg:col-span-2 space-y-0 divide-y divide-gray-200 border border-gray-200">
-        {faqs.map((faq, i) => (
+        {currentFaqs.map(faq => (
           <details class="group bg-white hover:bg-gray-50 transition-colors duration-150">
             <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-gray-900 text-base">
               <span>{faq.q}</span>

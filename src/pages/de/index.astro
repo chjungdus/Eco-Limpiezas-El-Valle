@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Servicios from '../../components/Servicios.astro';
+import SobreNosotros from '../../components/SobreNosotros.astro';
+import PorQueElegirnos from '../../components/PorQueElegirnos.astro';
+import ComoTrabajamos from '../../components/ComoTrabajamos.astro';
+import Referencias from '../../components/Referencias.astro';
+import Testimoniales from '../../components/Testimoniales.astro';
+import FAQ from '../../components/FAQ.astro';
+import ZonaDeTrabajo from '../../components/ZonaDeTrabajo.astro';
+import Contacto from '../../components/Contacto.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'de' as const;
+---
+
+<Layout lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <Servicios lang={lang} />
+    <SobreNosotros lang={lang} />
+    <PorQueElegirnos lang={lang} />
+    <ComoTrabajamos lang={lang} />
+    <Referencias lang={lang} />
+    <Testimoniales lang={lang} />
+    <FAQ lang={lang} />
+    <ZonaDeTrabajo lang={lang} />
+    <Contacto lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,99 +1,142 @@
 ---
-const services = [
-  {
-    title: 'Limpiezas Domésticas',
-    description: 'Mantenemos tu hogar en perfectas condiciones higiénicas con un servicio de limpieza regular o puntual adaptado a tus necesidades. Nos ocupamos de todas las estancias del hogar: cocinas, baños, dormitorios, salones, pasillos y zonas de uso común, prestando especial atención a los rincones y superficies que habitualmente se descuidan.',
-    extra: 'Trabajamos con total discreción, respetando la intimidad del hogar y los horarios de sus habitantes. Todos los productos que utilizamos son ecológicos y biodegradables, seguros para personas, niños y animales de compañía. Podemos establecer un servicio semanal, quincenal o mensual según lo que necesites.',
-    items: [
-      'Limpieza general de todas las estancias',
-      'Cocinas y electrodomésticos',
-      'Baños y sanitarios',
-      'Suelos, azulejos y superficies',
-      'Ventanas interiores',
-      'Armarios y muebles',
-    ],
-    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
-    color: 'bg-blue-700',
-  },
-  {
-    title: 'Limpieza de Fin de Obra',
-    description: 'Una vez terminada una obra, reforma o rehabilitación, los espacios quedan impregnados de polvo fino, restos de materiales de construcción, salpicaduras de pintura, adhesivos y suciedad acumulada difícil de eliminar. Nuestro equipo especializado en limpieza post-obra actúa de manera metódica para dejar el espacio listo para su uso o entrega desde el primer día.',
-    extra: 'Trabajamos en obras de nueva construcción, reformas integrales, rehabilitaciones de fachadas, renovaciones de locales comerciales y cualquier tipo de intervención constructiva, tanto en viviendas particulares como en naves industriales, oficinas o establecimientos hosteleros.',
-    items: [
-      'Eliminación de polvo de construcción',
-      'Limpieza de suelos y revestimientos',
-      'Retirada de restos de materiales',
-      'Cristales y carpinterías nuevas',
-      'Sanitarios y cocinas de nueva instalación',
-      'Limpieza de fachadas y accesos',
-    ],
-    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
-    color: 'bg-orange-700',
-  },
-  {
-    title: 'Tapicerías en General',
-    description: 'Los sofás, sillones, sillas tapizadas, colchones, cabeceros, cortinas y cualquier tipo de tapizado acumulan con el tiempo polvo, ácaros, bacterias, manchas y olores que no se eliminan con la limpieza ordinaria. Nuestro servicio de limpieza especializada de tapicerías devuelve el aspecto original a los tejidos y elimina en profundidad todos los agentes contaminantes.',
-    extra: 'Trabajamos con maquinaria específica de inyección y extracción, adaptada a cada tipo de tejido: tela, terciopelo, microfibra, piel sintética, cuero, lino y otros materiales delicados. El tiempo de secado es mínimo, por lo que el tapizado queda listo para usar en pocas horas.',
-    items: [
-      'Sofás y sillones de todo tipo',
-      'Colchones y cabeceros',
-      'Sillas y banquetas tapizadas',
-      'Cortinas y estores',
-      'Alfombras y moquetas',
-      'Asientos de vehículos',
-    ],
-    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
-    color: 'bg-purple-700',
-  },
-  {
-    title: 'Limpieza de Cristales',
-    description: 'Los cristales son uno de los elementos más visibles de cualquier espacio, tanto en el interior como en el exterior. Una limpieza deficiente deja marcas, velos de cal y rayaduras que afean el aspecto del edificio o la vivienda. Nuestro equipo utiliza técnicas y productos profesionales específicos para cristales que garantizan un resultado impecable y duradero.',
-    extra: 'Limpiamos ventanas, puertas acristaladas, mamparas de ducha, escaparates, cristaleras de fachada, tragaluces y cualquier superficie de vidrio, tanto en interior como en exterior. Contamos con equipos para trabajar en altura con total seguridad.',
-    items: [
-      'Ventanas interiores y exteriores',
-      'Mamparas y puertas de cristal',
-      'Escaparates y cristaleras',
-      'Tragaluces y lucernarios',
-      'Fachadas acristaladas',
-      'Espejos y superficies reflexivas',
-    ],
-    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
-    color: 'bg-eco-700',
-  },
-];
+import type { Lang } from '../i18n/translations';
+import { t } from '../i18n/translations';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const tr = t(lang);
+
+const services = {
+  es: [
+    {
+      title: 'Limpiezas Domésticas',
+      description: 'Mantenemos tu hogar en perfectas condiciones higiénicas con un servicio de limpieza regular o puntual adaptado a tus necesidades. Nos ocupamos de todas las estancias del hogar: cocinas, baños, dormitorios, salones, pasillos y zonas de uso común, prestando especial atención a los rincones y superficies que habitualmente se descuidan.',
+      extra: 'Trabajamos con total discreción, respetando la intimidad del hogar y los horarios de sus habitantes. Todos los productos que utilizamos son ecológicos y biodegradables, seguros para personas, niños y animales de compañía.',
+      items: ['Limpieza general de todas las estancias', 'Cocinas y electrodomésticos', 'Baños y sanitarios', 'Suelos, azulejos y superficies', 'Ventanas interiores', 'Armarios y muebles'],
+      color: 'bg-blue-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
+    },
+    {
+      title: 'Limpieza de Fin de Obra',
+      description: 'Una vez terminada una obra, reforma o rehabilitación, los espacios quedan impregnados de polvo fino, restos de materiales de construcción, salpicaduras de pintura y suciedad acumulada difícil de eliminar. Nuestro equipo especializado actúa de manera metódica para dejar el espacio listo para su uso desde el primer día.',
+      extra: 'Trabajamos en obras de nueva construcción, reformas integrales, rehabilitaciones y renovaciones de todo tipo, tanto en viviendas particulares como en naves industriales, oficinas o establecimientos hosteleros.',
+      items: ['Eliminación de polvo de construcción', 'Limpieza de suelos y revestimientos', 'Retirada de restos de materiales', 'Cristales y carpinterías nuevas', 'Sanitarios y cocinas de nueva instalación', 'Limpieza de fachadas y accesos'],
+      color: 'bg-orange-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    },
+    {
+      title: 'Tapicerías en General',
+      description: 'Los sofás, sillones, sillas tapizadas, colchones, cabeceros, cortinas y cualquier tipo de tapizado acumulan con el tiempo polvo, ácaros, bacterias, manchas y olores que no se eliminan con la limpieza ordinaria. Nuestro servicio especializado devuelve el aspecto original a los tejidos y elimina en profundidad todos los agentes contaminantes.',
+      extra: 'Trabajamos con maquinaria específica de inyección y extracción, adaptada a cada tipo de tejido: tela, terciopelo, microfibra, piel sintética, cuero, lino y otros materiales delicados.',
+      items: ['Sofás y sillones de todo tipo', 'Colchones y cabeceros', 'Sillas y banquetas tapizadas', 'Cortinas y estores', 'Alfombras y moquetas', 'Asientos de vehículos'],
+      color: 'bg-purple-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    },
+    {
+      title: 'Limpieza de Cristales',
+      description: 'Los cristales son uno de los elementos más visibles de cualquier espacio. Una limpieza deficiente deja marcas, velos de cal y rayaduras que afean el aspecto del edificio o la vivienda. Nuestro equipo utiliza técnicas y productos profesionales específicos para cristales que garantizan un resultado impecable y duradero.',
+      extra: 'Limpiamos ventanas, puertas acristaladas, mamparas de ducha, escaparates, cristaleras de fachada, tragaluces y cualquier superficie de vidrio. Contamos con equipos para trabajar en altura con total seguridad.',
+      items: ['Ventanas interiores y exteriores', 'Mamparas y puertas de cristal', 'Escaparates y cristaleras', 'Tragaluces y lucernarios', 'Fachadas acristaladas', 'Espejos y superficies reflexivas'],
+      color: 'bg-eco-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    },
+  ],
+  en: [
+    {
+      title: 'Domestic Cleaning',
+      description: 'We keep your home in perfect hygienic condition with a regular or one-off cleaning service adapted to your needs. We take care of all rooms: kitchens, bathrooms, bedrooms, living rooms, hallways and common areas, paying special attention to corners and surfaces that are usually overlooked.',
+      extra: 'We work with total discretion, respecting the privacy of the home and the schedules of its occupants. All products we use are ecological and biodegradable, safe for people, children and pets.',
+      items: ['General cleaning of all rooms', 'Kitchens and appliances', 'Bathrooms and sanitary fittings', 'Floors, tiles and surfaces', 'Interior windows', 'Wardrobes and furniture'],
+      color: 'bg-blue-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
+    },
+    {
+      title: 'Post-Construction Cleaning',
+      description: 'After a building work, renovation or rehabilitation, spaces are filled with fine dust, construction material residues, paint splashes and accumulated dirt that is hard to remove. Our specialised team works methodically to have the space ready for use from day one.',
+      extra: 'We work on new builds, full renovations, rehabilitations and all types of refurbishments, both in private homes and industrial units, offices or hotel establishments.',
+      items: ['Removal of construction dust', 'Floor and cladding cleaning', 'Removal of material residues', 'New glazing and joinery', 'New bathrooms and kitchens', 'Façade and access cleaning'],
+      color: 'bg-orange-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    },
+    {
+      title: 'Upholstery Cleaning',
+      description: 'Sofas, armchairs, upholstered chairs, mattresses, headboards, curtains and all types of upholstery accumulate dust, mites, bacteria, stains and odours over time that cannot be removed with ordinary cleaning. Our specialised service restores fabrics to their original appearance and thoroughly eliminates all contaminants.',
+      extra: 'We use specific injection and extraction machinery, adapted to each type of fabric: fabric, velvet, microfibre, synthetic leather, leather, linen and other delicate materials.',
+      items: ['Sofas and armchairs of all types', 'Mattresses and headboards', 'Upholstered chairs and stools', 'Curtains and blinds', 'Rugs and fitted carpets', 'Vehicle seats'],
+      color: 'bg-purple-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    },
+    {
+      title: 'Glass Cleaning',
+      description: 'Glass is one of the most visible elements of any space. Poor cleaning leaves marks, limescale haze and scratches that spoil the appearance of the building or home. Our team uses professional techniques and products specific to glass that guarantee a flawless, long-lasting result.',
+      extra: 'We clean windows, glazed doors, shower screens, shop fronts, glazed façades, skylights and any glass surface. We have equipment to work safely at height.',
+      items: ['Interior and exterior windows', 'Glass screens and doors', 'Shop fronts and glazed walls', 'Skylights and roof lights', 'Glazed façades', 'Mirrors and reflective surfaces'],
+      color: 'bg-eco-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    },
+  ],
+  de: [
+    {
+      title: 'Haushaltsreinigung',
+      description: 'Wir halten Ihr Zuhause in einwandfreiem hygienischen Zustand mit einem regelmäßigen oder einmaligen Reinigungsservice, der Ihren Bedürfnissen angepasst ist. Wir kümmern uns um alle Räume: Küchen, Bäder, Schlafzimmer, Wohnzimmer, Flure und Gemeinschaftsbereiche.',
+      extra: 'Wir arbeiten mit absoluter Diskretion und respektieren die Privatsphäre des Haushalts. Alle verwendeten Produkte sind ökologisch und biologisch abbaubar, sicher für Menschen, Kinder und Haustiere.',
+      items: ['Allgemeine Reinigung aller Räume', 'Küchen und Haushaltsgeräte', 'Bäder und Sanitäranlagen', 'Böden, Fliesen und Oberflächen', 'Innenfenster', 'Schränke und Möbel'],
+      color: 'bg-blue-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
+    },
+    {
+      title: 'Baureinigung',
+      description: 'Nach Bau-, Umbau- oder Sanierungsarbeiten sind die Räume mit feinem Staub, Baumaterialresten, Farbspritzern und angesammeltem Schmutz belastet. Unser spezialisiertes Team arbeitet methodisch, um den Raum ab dem ersten Tag nutzungsfertig zu machen.',
+      extra: 'Wir arbeiten bei Neubauten, Komplettsanierungen, Rehabilitierungen und allen Arten von Renovierungen, sowohl in Privatwohnungen als auch in Industriehallen, Büros oder Hotelbetrieben.',
+      items: ['Beseitigung von Baustaub', 'Boden- und Verkleidungsreinigung', 'Entfernung von Materialresten', 'Neue Verglasung und Tischlerarbeiten', 'Neue Bäder und Küchen', 'Fassaden- und Zugangsreinigung'],
+      color: 'bg-orange-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    },
+    {
+      title: 'Polsterreinigung',
+      description: 'Sofas, Sessel, gepolsterte Stühle, Matratzen, Kopfteile, Vorhänge und alle Arten von Polstern sammeln im Laufe der Zeit Staub, Milben, Bakterien, Flecken und Gerüche an. Unser spezialisierter Service stellt das ursprüngliche Erscheinungsbild der Stoffe wieder her.',
+      extra: 'Wir verwenden spezifische Injektions- und Extraktionsmaschinen, angepasst an jede Art von Stoff: Stoff, Samt, Mikrofaser, Kunstleder, Leder, Leinen und andere empfindliche Materialien.',
+      items: ['Sofas und Sessel aller Art', 'Matratzen und Kopfteile', 'Gepolsterte Stühle und Hocker', 'Vorhänge und Jalousien', 'Teppiche und Teppichböden', 'Fahrzeugsitze'],
+      color: 'bg-purple-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    },
+    {
+      title: 'Glasreinigung',
+      description: 'Glas ist eines der sichtbarsten Elemente in jedem Raum. Schlechte Reinigung hinterlässt Flecken, Kalkschleier und Kratzer. Unser Team verwendet professionelle Techniken und Produkte speziell für Glas, die ein makelloses und dauerhaftes Ergebnis garantieren.',
+      extra: 'Wir reinigen Fenster, Glastüren, Duschkabinen, Schaufenster, Glasfassaden, Oberlichter und alle Glasflächen. Wir verfügen über Ausrüstung für sicheres Arbeiten in der Höhe.',
+      items: ['Innen- und Außenfenster', 'Glaswände und -türen', 'Schaufenster und Glasfassaden', 'Oberlichter und Dachfenster', 'Verglaste Fassaden', 'Spiegel und reflektierende Flächen'],
+      color: 'bg-eco-700',
+      icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    },
+  ],
+};
+
+const currentServices = services[lang];
 ---
 
 <section id="servicios" class="py-20 md:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div class="mb-16 border-l-4 border-eco-600 pl-6">
-      <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Lo que hacemos</span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Nuestros Servicios</h2>
-      <p class="text-gray-500 text-lg max-w-3xl">
-        Ofrecemos una limpieza profesional e integral para todo tipo de espacios, adaptándonos siempre a las necesidades concretas de cada cliente. Todos nuestros servicios se realizan con productos ecológicos y por personal cualificado.
-      </p>
+      <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">{tr.sectionServicesLabel}</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">{tr.sectionServicesTitle}</h2>
+      <p class="text-gray-500 text-lg max-w-3xl">{tr.sectionServicesSubtitle}</p>
     </div>
 
     <div class="space-y-0 divide-y divide-gray-100">
-      {services.map((service, i) => (
-        <div class={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${i % 2 === 1 ? '' : ''}`}>
-
-          <!-- Photo slot -->
+      {currentServices.map((service, i) => (
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
           <div class={`${i % 2 === 1 ? 'lg:order-2' : ''} bg-gray-100 border border-dashed border-gray-300 hover:border-eco-400 hover:bg-eco-50 transition-colors duration-200 min-h-72 flex flex-col items-center justify-center group`}>
             <svg class="w-12 h-12 text-gray-400 group-hover:text-eco-500 mb-3 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>
             <p class="text-gray-500 font-medium group-hover:text-eco-700 transition-colors">{service.title}</p>
-            <p class="text-gray-400 text-sm mt-1">Añadir fotografía del servicio</p>
+            <p class="text-gray-400 text-sm mt-1">{tr.servicesPhotoLabel}</p>
           </div>
-
-          <!-- Text -->
           <div class={`${i % 2 === 1 ? 'lg:order-1' : ''} p-8 md:p-12 flex flex-col justify-center`}>
             <div class={`inline-flex w-12 h-12 items-center justify-center mb-5 text-white ${service.color}`} set:html={service.icon}/>
             <h3 class="text-2xl font-extrabold text-gray-900 mb-4">{service.title}</h3>
             <p class="text-gray-600 leading-relaxed mb-4">{service.description}</p>
             <p class="text-gray-500 leading-relaxed mb-6 text-sm">{service.extra}</p>
-
             <ul class="space-y-2 mb-8">
               {service.items.map(item => (
                 <li class="flex items-start gap-3 text-gray-600 text-sm">
@@ -104,31 +147,23 @@ const services = [
                 </li>
               ))}
             </ul>
-
-            <a href="#contacto"
-              class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-6 py-3 font-bold text-sm transition-colors duration-150 w-fit">
-              Pedir presupuesto
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+            <a href="#contacto" class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-6 py-3 font-bold text-sm transition-colors duration-150 w-fit">
+              {tr.servicesCta}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
           </div>
         </div>
       ))}
     </div>
 
-    <!-- CTA band -->
     <div class="mt-16 bg-gray-900 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
-        <h3 class="font-extrabold text-white text-xl mb-2">¿Necesitas un servicio diferente?</h3>
-        <p class="text-gray-400">Consultanos sin compromiso. Estudiamos tu caso y te preparamos una propuesta personalizada.</p>
+        <h3 class="font-extrabold text-white text-xl mb-2">{tr.servicesBannerTitle}</h3>
+        <p class="text-gray-400">{tr.servicesBannerText}</p>
       </div>
-      <a href="tel:+34605984005"
-        class="flex-shrink-0 inline-flex items-center gap-3 bg-eco-600 hover:bg-eco-700 text-white px-8 py-4 font-bold text-sm transition-colors duration-150 whitespace-nowrap">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-        </svg>
-        Llamar: 605 984 005
+      <a href="tel:+34605984005" class="flex-shrink-0 inline-flex items-center gap-3 bg-eco-600 hover:bg-eco-700 text-white px-8 py-4 font-bold text-sm transition-colors duration-150 whitespace-nowrap">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        {tr.servicesCallBtn}
       </a>
     </div>
   </div>

@@ -1,21 +1,23 @@
 ---
+import type { Lang } from '../i18n/translations';
+import { t } from '../i18n/translations';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const tr = t(lang);
 ---
 
 <section id="nosotros" class="py-20 md:py-28 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-      <!-- Left: photos -->
       <div class="space-y-4">
-        <!-- Main photo -->
         <div class="w-full aspect-[4/3] bg-gray-200 border border-dashed border-gray-400 hover:border-eco-500 hover:bg-eco-50 transition-colors duration-200 flex flex-col items-center justify-center group">
           <svg class="w-12 h-12 text-gray-400 group-hover:text-eco-500 mb-3 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
           </svg>
-          <p class="text-gray-500 font-medium group-hover:text-eco-700 transition-colors">Foto de Davinia Gómez Baranda</p>
-          <p class="text-gray-400 text-sm mt-1">Responsable del negocio</p>
+          <p class="text-gray-500 font-medium group-hover:text-eco-700 transition-colors">{tr.aboutPhotoMain}</p>
+          <p class="text-gray-400 text-sm mt-1">{tr.aboutPhotoMainSub}</p>
         </div>
-        <!-- Two secondary photos -->
         <div class="grid grid-cols-2 gap-4">
           <div class="aspect-video bg-gray-200 border border-dashed border-gray-400 hover:border-eco-500 hover:bg-eco-50 transition-colors duration-200 flex flex-col items-center justify-center group">
             <svg class="w-8 h-8 text-gray-400 group-hover:text-eco-500 mb-2 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,32 +34,23 @@
         </div>
       </div>
 
-      <!-- Right: text -->
       <div>
         <div class="border-l-4 border-eco-600 pl-6 mb-10">
-          <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Quiénes somos</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Una empresa local con vocación de servicio</h2>
+          <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">{tr.sectionAboutLabel}</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">{tr.sectionAboutTitle}</h2>
         </div>
 
-        <p class="text-gray-700 leading-relaxed text-lg mb-5">
-          Eco-Limpiezas El Valle es una empresa de limpieza integral con base en <strong>Espinosa de los Monteros</strong>, nacida con el objetivo de ofrecer un servicio profesional, de calidad y comprometido con el cuidado del medioambiente en la comarca de Las Merindades y sus alrededores.
-        </p>
-        <p class="text-gray-600 leading-relaxed mb-5">
-          Al frente del negocio está <strong>Davinia Gómez Baranda</strong>, quien se involucra personalmente en cada servicio y en la relación con cada cliente. No delegamos la atención al cliente en terceros: quien responde el teléfono y quien acude a realizar el trabajo son la misma persona o un equipo de confianza directamente supervisado.
-        </p>
-        <p class="text-gray-600 leading-relaxed mb-5">
-          Entendemos la limpieza como algo más que una tarea rutinaria. Un espacio limpio, ordenado e higiénico mejora la calidad de vida de las personas que lo habitan o trabajan en él. Por eso ponemos el máximo cuidado en cada detalle, nos mantenemos actualizados en técnicas y productos, y nos aseguramos de que el resultado sea siempre el que el cliente espera.
-        </p>
-        <p class="text-gray-600 leading-relaxed mb-8">
-          Nuestra apuesta por los productos ecológicos no es una cuestión de marketing, sino de convicción. Queremos que nuestro trabajo contribuya a preservar el entorno natural de Las Merindades, una comarca de gran valor medioambiental, al mismo tiempo que garantizamos la seguridad de nuestros clientes y de su entorno familiar.
-        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-5">{tr.aboutText1}</p>
+        <p class="text-gray-600 leading-relaxed mb-5">{tr.aboutText2}</p>
+        <p class="text-gray-600 leading-relaxed mb-5">{tr.aboutText3}</p>
+        <p class="text-gray-600 leading-relaxed mb-8">{tr.aboutText4}</p>
 
         <div class="space-y-4 mb-10">
           {[
-            { title: 'Confianza y discreción', desc: 'Trabajamos con la máxima discreción y respeto en cada hogar o negocio que nos confían.' },
-            { title: 'Puntualidad y compromiso', desc: 'Cumplimos escrupulosamente con los horarios y plazos acordados con cada cliente.' },
-            { title: 'Calidad verificable', desc: 'No nos conformamos con una limpieza superficial. El resultado final siempre es nuestro principal argumento.' },
-            { title: 'Comunicación directa', desc: 'Davinia atiende personalmente todas las consultas, sin centralitas ni intermediarios.' },
+            { title: tr.aboutValue1Title, desc: tr.aboutValue1Desc },
+            { title: tr.aboutValue2Title, desc: tr.aboutValue2Desc },
+            { title: tr.aboutValue3Title, desc: tr.aboutValue3Desc },
+            { title: tr.aboutValue4Title, desc: tr.aboutValue4Desc },
           ].map(v => (
             <div class="flex items-start gap-4 pb-4 border-b border-gray-100 last:border-0">
               <div class="w-1 h-full min-h-6 bg-eco-600 flex-shrink-0 mt-1"></div>
@@ -71,7 +64,7 @@
 
         <a href="#contacto"
           class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-7 py-3.5 font-bold text-sm transition-colors duration-150">
-          Contactar con nosotros
+          {tr.aboutCtaBtn}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
