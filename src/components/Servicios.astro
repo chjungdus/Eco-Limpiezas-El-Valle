@@ -2,35 +2,63 @@
 const services = [
   {
     title: 'Limpiezas Domésticas',
-    description: 'Mantenemos tu hogar en perfecto estado con un servicio de limpieza regular o puntual adaptado a tus necesidades. Nos encargamos de todas las estancias: cocina, baños, dormitorios, salón y zonas comunes, con especial atención a los rincones que habitualmente se pasan por alto.',
-    extra: 'Trabajamos con total discreción y respeto a tu intimidad, usando productos ecológicos que no dañan ni el medioambiente ni la salud de tu familia ni de tus mascotas.',
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
-    color: 'bg-blue-50 text-blue-600',
-    tags: ['Cocinas', 'Baños', 'Dormitorios', 'Zonas comunes'],
+    description: 'Mantenemos tu hogar en perfectas condiciones higiénicas con un servicio de limpieza regular o puntual adaptado a tus necesidades. Nos ocupamos de todas las estancias del hogar: cocinas, baños, dormitorios, salones, pasillos y zonas de uso común, prestando especial atención a los rincones y superficies que habitualmente se descuidan.',
+    extra: 'Trabajamos con total discreción, respetando la intimidad del hogar y los horarios de sus habitantes. Todos los productos que utilizamos son ecológicos y biodegradables, seguros para personas, niños y animales de compañía. Podemos establecer un servicio semanal, quincenal o mensual según lo que necesites.',
+    items: [
+      'Limpieza general de todas las estancias',
+      'Cocinas y electrodomésticos',
+      'Baños y sanitarios',
+      'Suelos, azulejos y superficies',
+      'Ventanas interiores',
+      'Armarios y muebles',
+    ],
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
+    color: 'bg-blue-700',
   },
   {
     title: 'Limpieza de Fin de Obra',
-    description: 'Una obra deja atrás una cantidad enorme de polvo, restos de materiales, salpicaduras de pintura y suciedad acumulada. Nuestro equipo especializado se encarga de dejarlo todo impecable para que puedas disfrutar de tu nuevo espacio desde el primer momento.',
-    extra: 'Actuamos en reformas, obras nuevas, rehabilitaciones y renovaciones de todo tipo, tanto en viviendas particulares como en locales comerciales y oficinas.',
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
-    color: 'bg-orange-50 text-orange-600',
-    tags: ['Reformas', 'Obra nueva', 'Locales', 'Oficinas'],
+    description: 'Una vez terminada una obra, reforma o rehabilitación, los espacios quedan impregnados de polvo fino, restos de materiales de construcción, salpicaduras de pintura, adhesivos y suciedad acumulada difícil de eliminar. Nuestro equipo especializado en limpieza post-obra actúa de manera metódica para dejar el espacio listo para su uso o entrega desde el primer día.',
+    extra: 'Trabajamos en obras de nueva construcción, reformas integrales, rehabilitaciones de fachadas, renovaciones de locales comerciales y cualquier tipo de intervención constructiva, tanto en viviendas particulares como en naves industriales, oficinas o establecimientos hosteleros.',
+    items: [
+      'Eliminación de polvo de construcción',
+      'Limpieza de suelos y revestimientos',
+      'Retirada de restos de materiales',
+      'Cristales y carpinterías nuevas',
+      'Sanitarios y cocinas de nueva instalación',
+      'Limpieza de fachadas y accesos',
+    ],
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    color: 'bg-orange-700',
   },
   {
     title: 'Tapicerías en General',
-    description: 'Los sofás, sillas, colchones, cortinas y tapizados acumulan polvo, ácaros, manchas y olores con el tiempo. Con nuestros equipos y técnicas especializadas, devolvemos el aspecto original a tus tejidos y eliminamos bacterias y alérgenos en profundidad.',
-    extra: 'Trabajamos con todo tipo de materiales: tela, terciopelo, microfibra, piel sintética, cuero y más. Garantizamos resultados visibles y un secado rápido.',
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
-    color: 'bg-purple-50 text-purple-600',
-    tags: ['Sofás', 'Colchones', 'Cortinas', 'Sillas'],
+    description: 'Los sofás, sillones, sillas tapizadas, colchones, cabeceros, cortinas y cualquier tipo de tapizado acumulan con el tiempo polvo, ácaros, bacterias, manchas y olores que no se eliminan con la limpieza ordinaria. Nuestro servicio de limpieza especializada de tapicerías devuelve el aspecto original a los tejidos y elimina en profundidad todos los agentes contaminantes.',
+    extra: 'Trabajamos con maquinaria específica de inyección y extracción, adaptada a cada tipo de tejido: tela, terciopelo, microfibra, piel sintética, cuero, lino y otros materiales delicados. El tiempo de secado es mínimo, por lo que el tapizado queda listo para usar en pocas horas.',
+    items: [
+      'Sofás y sillones de todo tipo',
+      'Colchones y cabeceros',
+      'Sillas y banquetas tapizadas',
+      'Cortinas y estores',
+      'Alfombras y moquetas',
+      'Asientos de vehículos',
+    ],
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    color: 'bg-purple-700',
   },
   {
     title: 'Limpieza de Cristales',
-    description: 'Cristales impecables, sin marcas, sin rayas y sin residuos de cal. Limpiamos ventanas, puertas acristaladas, mamparas de baño, escaparates y fachadas de vidrio tanto en interiores como en exteriores, en viviendas particulares y negocios.',
-    extra: 'Contamos con el material adecuado para trabajar a diferentes alturas y en superficies de difícil acceso, garantizando siempre la máxima seguridad y un acabado profesional.',
-    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
-    color: 'bg-eco-50 text-eco-600',
-    tags: ['Ventanas', 'Mamparas', 'Escaparates', 'Fachadas'],
+    description: 'Los cristales son uno de los elementos más visibles de cualquier espacio, tanto en el interior como en el exterior. Una limpieza deficiente deja marcas, velos de cal y rayaduras que afean el aspecto del edificio o la vivienda. Nuestro equipo utiliza técnicas y productos profesionales específicos para cristales que garantizan un resultado impecable y duradero.',
+    extra: 'Limpiamos ventanas, puertas acristaladas, mamparas de ducha, escaparates, cristaleras de fachada, tragaluces y cualquier superficie de vidrio, tanto en interior como en exterior. Contamos con equipos para trabajar en altura con total seguridad.',
+    items: [
+      'Ventanas interiores y exteriores',
+      'Mamparas y puertas de cristal',
+      'Escaparates y cristaleras',
+      'Tragaluces y lucernarios',
+      'Fachadas acristaladas',
+      'Espejos y superficies reflexivas',
+    ],
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    color: 'bg-eco-700',
   },
 ];
 ---
@@ -38,47 +66,48 @@ const services = [
 <section id="servicios" class="py-20 md:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="text-center mb-16">
-      <span class="inline-block text-eco-600 font-semibold text-sm uppercase tracking-widest mb-3">Lo que hacemos</span>
+    <div class="mb-16 border-l-4 border-eco-600 pl-6">
+      <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Lo que hacemos</span>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Nuestros Servicios</h2>
-      <p class="text-lg text-gray-500 max-w-3xl mx-auto">
-        Ofrecemos una limpieza profesional y a fondo para todo tipo de espacios, adaptándonos siempre a las necesidades concretas de cada cliente, tanto particulares como empresas.
+      <p class="text-gray-500 text-lg max-w-3xl">
+        Ofrecemos una limpieza profesional e integral para todo tipo de espacios, adaptándonos siempre a las necesidades concretas de cada cliente. Todos nuestros servicios se realizan con productos ecológicos y por personal cualificado.
       </p>
     </div>
 
-    <!-- Services: alternating layout -->
-    <div class="space-y-16">
+    <div class="space-y-0 divide-y divide-gray-100">
       {services.map((service, i) => (
-        <div class={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+        <div class={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${i % 2 === 1 ? '' : ''}`}>
 
           <!-- Photo slot -->
-          <div class={i % 2 === 1 ? 'lg:order-2' : ''}>
-            <div class="w-full aspect-video rounded-2xl bg-gray-100 border-2 border-dashed border-gray-300 flex flex-col items-center justify-center group hover:border-eco-400 hover:bg-eco-50 transition-colors duration-300">
-              <svg class="w-12 h-12 text-gray-400 group-hover:text-eco-500 mb-3 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-              <p class="text-gray-500 font-semibold group-hover:text-eco-600 transition-colors">Foto: {service.title}</p>
-              <p class="text-gray-400 text-sm mt-1">Sustituir por imagen real</p>
-            </div>
+          <div class={`${i % 2 === 1 ? 'lg:order-2' : ''} bg-gray-100 border border-dashed border-gray-300 hover:border-eco-400 hover:bg-eco-50 transition-colors duration-200 min-h-72 flex flex-col items-center justify-center group`}>
+            <svg class="w-12 h-12 text-gray-400 group-hover:text-eco-500 mb-3 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <p class="text-gray-500 font-medium group-hover:text-eco-700 transition-colors">{service.title}</p>
+            <p class="text-gray-400 text-sm mt-1">Añadir fotografía del servicio</p>
           </div>
 
           <!-- Text -->
-          <div class={i % 2 === 1 ? 'lg:order-1' : ''}>
-            <div class={`inline-flex w-14 h-14 rounded-xl items-center justify-center mb-5 ${service.color}`} set:html={service.icon}/>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">{service.title}</h3>
-            <p class="text-gray-600 leading-relaxed mb-4 text-lg">{service.description}</p>
-            <p class="text-gray-500 leading-relaxed mb-6">{service.extra}</p>
+          <div class={`${i % 2 === 1 ? 'lg:order-1' : ''} p-8 md:p-12 flex flex-col justify-center`}>
+            <div class={`inline-flex w-12 h-12 items-center justify-center mb-5 text-white ${service.color}`} set:html={service.icon}/>
+            <h3 class="text-2xl font-extrabold text-gray-900 mb-4">{service.title}</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">{service.description}</p>
+            <p class="text-gray-500 leading-relaxed mb-6 text-sm">{service.extra}</p>
 
-            <!-- Tags -->
-            <div class="flex flex-wrap gap-2 mb-7">
-              {service.tags.map(tag => (
-                <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1.5 rounded-full">{tag}</span>
+            <ul class="space-y-2 mb-8">
+              {service.items.map(item => (
+                <li class="flex items-start gap-3 text-gray-600 text-sm">
+                  <svg class="w-4 h-4 text-eco-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
 
             <a href="#contacto"
-              class="inline-flex items-center gap-2 bg-eco-600 hover:bg-eco-700 text-white px-6 py-3 rounded-xl font-bold transition-colors duration-200 shadow-sm">
-              Pedir presupuesto gratis
+              class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-6 py-3 font-bold text-sm transition-colors duration-150 w-fit">
+              Pedir presupuesto
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -88,20 +117,19 @@ const services = [
       ))}
     </div>
 
-    <!-- Bottom CTA -->
-    <div class="mt-20 bg-eco-50 border border-eco-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+    <!-- CTA band -->
+    <div class="mt-16 bg-gray-900 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
-        <h3 class="font-extrabold text-eco-800 text-2xl mb-2">¿Necesitas otro tipo de limpieza?</h3>
-        <p class="text-eco-700 text-lg">Cuéntanos qué necesitas y te preparamos un presupuesto personalizado sin ningún tipo de compromiso. Respondemos rápido.</p>
+        <h3 class="font-extrabold text-white text-xl mb-2">¿Necesitas un servicio diferente?</h3>
+        <p class="text-gray-400">Consultanos sin compromiso. Estudiamos tu caso y te preparamos una propuesta personalizada.</p>
       </div>
       <a href="tel:+34605984005"
-        class="flex-shrink-0 inline-flex items-center gap-3 bg-eco-600 hover:bg-eco-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 shadow-sm whitespace-nowrap">
+        class="flex-shrink-0 inline-flex items-center gap-3 bg-eco-600 hover:bg-eco-700 text-white px-8 py-4 font-bold text-sm transition-colors duration-150 whitespace-nowrap">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
         </svg>
-        605 984 005
+        Llamar: 605 984 005
       </a>
     </div>
-
   </div>
 </section>
