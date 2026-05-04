@@ -14,10 +14,11 @@ const navLinks = [
   { href: '#contacto', label: tr.navContact },
 ];
 
+const base = import.meta.env.BASE_URL; // ends with '/'
 const langPaths: Record<Lang, string> = {
-  es: '/',
-  en: '/en/',
-  de: '/de/',
+  es: base,
+  en: `${base}en/`,
+  de: `${base}de/`,
 };
 ---
 
