@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Referencias from '../../components/Referencias.astro';
+import Testimoniales from '../../components/Testimoniales.astro';
+import Galeria from '../../components/Galeria.astro';
+import FAQ from '../../components/FAQ.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'de' as const;
+---
+<Layout lang={lang}>
+  <Header lang={lang} page="referencias" />
+  <main>
+    <Referencias lang={lang} />
+    <Testimoniales lang={lang} />
+    <Galeria lang={lang} />
+    <FAQ lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

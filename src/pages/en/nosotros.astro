@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import SobreNosotros from '../../components/SobreNosotros.astro';
+import PorQueElegirnos from '../../components/PorQueElegirnos.astro';
+import ComoTrabajamos from '../../components/ComoTrabajamos.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'en' as const;
+---
+<Layout lang={lang}>
+  <Header lang={lang} page="nosotros" />
+  <main>
+    <SobreNosotros lang={lang} />
+    <PorQueElegirnos lang={lang} />
+    <ComoTrabajamos lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>
