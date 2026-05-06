@@ -12,6 +12,7 @@ const langBase = lang === 'es' ? b : `${b}/${lang}`;
 const pageSlug = page ? `${page}/` : '';
 
 const navLinks = [
+  { href: `${langBase}/`, label: tr.navHome },
   { href: `${langBase}/servicios/`, label: tr.navServices },
   { href: `${langBase}/nosotros/`, label: tr.navAbout },
   { href: `${langBase}/referencias/`, label: tr.navReferences },

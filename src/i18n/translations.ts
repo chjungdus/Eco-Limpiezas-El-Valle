@@ -7,6 +7,7 @@ export const translations = {
     siteDescription: 'Empresa de limpieza profesional en Espinosa de los Monteros y Las Merindades, Burgos. Doméstica, fin de obra, tapicerías y cristales. Horarios flexibles.',
 
     // Header
+    navHome: 'Inicio',
     navServices: 'Servicios',
     navAbout: 'Nosotros',
     navReferences: 'Referencias',
@@ -158,6 +159,7 @@ export const translations = {
     siteTitle: 'Eco-Limpiezas El Valle | Professional Cleaning in Merindades, Burgos',
     siteDescription: 'Professional cleaning company in Espinosa de los Monteros and Las Merindades, Burgos. Domestic, post-construction, upholstery and glass cleaning. Flexible hours.',
 
+    navHome: 'Home',
     navServices: 'Services',
     navAbout: 'About us',
     navReferences: 'References',
@@ -297,6 +299,7 @@ export const translations = {
     siteTitle: 'Eco-Limpiezas El Valle | Professionelle Reinigung in Merindades, Burgos',
     siteDescription: 'Professionelles Reinigungsunternehmen in Espinosa de los Monteros und Las Merindades, Burgos. Haushaltsreinigung, Baureinigung, Polsterreinigung und Glasreinigung. Flexible Arbeitszeiten.',
 
+    navHome: 'Start',
     navServices: 'Leistungen',
     navAbout: 'Über uns',
     navReferences: 'Referenzen',
