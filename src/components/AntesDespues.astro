@@ -1,0 +1,102 @@
+---
+import type { Lang } from '../i18n/translations';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const b = base.endsWith('/') ? base.slice(0, -1) : base;
+const langBase = lang === 'es' ? b : `${b}/${lang}`;
+const ctaHref = `${langBase}/servicios/`;
+
+const labels = {
+  es: {
+    badge: 'Resultados reales',
+    heading: 'Antes & Después',
+    subtitle: 'Imágenes reales de nuestros trabajos. Así quedan los espacios tras nuestro servicio.',
+    before: 'Antes',
+    after: 'Después',
+    case1title: 'Eliminación de moho',
+    case1desc: 'Tratamiento especializado contra moho y humedad en paredes. Resultado visible desde la primera sesión.',
+    ctaLabel: 'Ver todos los servicios',
+  },
+  en: {
+    badge: 'Real results',
+    heading: 'Before & After',
+    subtitle: 'Real photos of our work. This is how spaces look after our service.',
+    before: 'Before',
+    after: 'After',
+    case1title: 'Mould removal',
+    case1desc: 'Specialist treatment against mould and damp on walls. Visible results from the first session.',
+    ctaLabel: 'See all services',
+  },
+  de: {
+    badge: 'Echte Ergebnisse',
+    heading: 'Vorher & Nachher',
+    subtitle: 'Echte Fotos unserer Arbeit. So sehen Räume nach unserem Service aus.',
+    before: 'Vorher',
+    after: 'Nachher',
+    case1title: 'Schimmelentfernung',
+    case1desc: 'Fachgerechte Behandlung gegen Schimmel und Feuchtigkeit an Wänden. Sichtbares Ergebnis ab der ersten Sitzung.',
+    ctaLabel: 'Alle Dienste ansehen',
+  },
+};
+
+const l = labels[lang];
+---
+
+<section class="py-20 md:py-28 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="inline-block text-eco-600 font-semibold text-sm uppercase tracking-widest mb-3">{l.badge}</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">{l.heading}</h2>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto">{l.subtitle}</p>
+    </div>
+
+    <!-- Before / After card -->
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white border border-gray-200 overflow-hidden">
+        <div class="grid grid-cols-2">
+          <!-- Before -->
+          <div class="relative">
+            <img
+              src={`${base}/images/moho-antes.jpeg`}
+              alt={`${l.before}: ${l.case1title}`}
+              class="w-full aspect-[3/4] object-cover object-center"
+            />
+            <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+              {l.before}
+            </div>
+          </div>
+          <!-- After -->
+          <div class="relative">
+            <img
+              src={`${base}/images/moho-despues.jpeg`}
+              alt={`${l.after}: ${l.case1title}`}
+              class="w-full aspect-[3/4] object-cover object-center"
+            />
+            <div class="absolute top-3 right-3 bg-eco-600 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+              {l.after}
+            </div>
+          </div>
+        </div>
+        <!-- Divider line -->
+        <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-white pointer-events-none hidden"></div>
+        <div class="px-6 py-5 border-t border-gray-100">
+          <h3 class="font-bold text-gray-900 text-lg mb-1">{l.case1title}</h3>
+          <p class="text-gray-500 text-sm">{l.case1desc}</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href={ctaHref}
+          class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-8 py-3.5 font-semibold text-sm transition-colors duration-150">
+          {l.ctaLabel}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
