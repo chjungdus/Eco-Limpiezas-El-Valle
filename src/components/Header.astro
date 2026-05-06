@@ -25,7 +25,7 @@ const langPaths: Record<Lang, string> = {
   de: `${b}/de/${pageSlug}`,
 };
 
-const homeHref = langPaths[lang];
+const homeHref = lang === 'es' ? `${b}/` : `${b}/${lang}/`;
 ---
 
 <div class="bg-eco-800 text-eco-100 text-xs py-2 hidden md:block">
