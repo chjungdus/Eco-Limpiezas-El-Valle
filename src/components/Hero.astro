@@ -25,9 +25,9 @@ const tr = t(lang);
           {tr.heroBadge}
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-          {lang === 'es' && <>Limpieza profesional<br/><span class="text-eco-400">con compromiso</span><br/>medioambiental</>}
-          {lang === 'en' && <>Professional cleaning<br/><span class="text-eco-400">with environmental</span><br/>commitment</>}
-          {lang === 'de' && <>Professionelle Reinigung<br/><span class="text-eco-400">mit ökologischer</span><br/>Verantwortung</>}
+          {lang === 'es' && <>Limpieza profesional<br/><span class="text-eco-400">de calidad</span><br/>en Las Merindades</>}
+          {lang === 'en' && <>Professional cleaning<br/><span class="text-eco-400">you can trust</span><br/>in Las Merindades</>}
+          {lang === 'de' && <>Professionelle Reinigung<br/><span class="text-eco-400">mit Qualität</span><br/>in Las Merindades</>}
         </h1>
         <p class="text-eco-200 text-lg leading-relaxed mb-4">{tr.heroText1}</p>
         <p class="text-eco-300 leading-relaxed mb-10">{tr.heroText2}</p>
@@ -66,7 +66,7 @@ const tr = t(lang);
       <div class="block lg:hidden w-full">
         <img
           src={`${import.meta.env.BASE_URL}/images/sede-mobile.jpeg`}
-          alt="Sede Eco-Limpiezas El Valle, Espinosa de los Monteros"
+          alt="Sede Limpiezas El Valle, Espinosa de los Monteros"
           class="w-full object-cover max-h-64"
         />
       </div>
@@ -75,7 +75,7 @@ const tr = t(lang);
       <div class="hidden lg:flex flex-col gap-4">
         <img
           src={`${import.meta.env.BASE_URL}/images/van-logo.jpeg`}
-          alt="Vehículo profesional Eco-Limpiezas El Valle con servicios"
+          alt="Vehículo profesional Limpiezas El Valle con servicios"
           class="w-full aspect-[3/2] object-cover"
         />
         <div class="grid grid-cols-2 gap-4">
@@ -102,7 +102,7 @@ const tr = t(lang);
           { value: '100%', label: tr.statSatisfaction },
           { value: '+50', label: tr.statClients },
           { value: '7/7', label: tr.statDays },
-          { value: 'ECO', label: tr.statEco },
+          { value: '★★★', label: tr.statEco },
         ].map(stat => (
           <div class="px-8 py-6 text-center">
             <div class="text-3xl font-extrabold text-eco-400 mb-1">{stat.value}</div>
