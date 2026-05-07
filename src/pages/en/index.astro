@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
+import SeccionesHome from '../../components/SeccionesHome.astro';
 import ServiciosPreview from '../../components/ServiciosPreview.astro';
 import AntesDespues from '../../components/AntesDespues.astro';
 import Footer from '../../components/Footer.astro';
@@ -11,6 +12,7 @@ const lang = 'en' as const;
   <Header lang={lang} page="" />
   <main>
     <Hero lang={lang} />
+    <SeccionesHome lang={lang} />
     <ServiciosPreview lang={lang} />
     <AntesDespues lang={lang} />
   </main>

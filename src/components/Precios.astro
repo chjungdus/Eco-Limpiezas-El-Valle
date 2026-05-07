@@ -1,0 +1,153 @@
+---
+import type { Lang } from '../i18n/translations';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+
+const labels = {
+  es: {
+    badge: 'Tarifas orientativas',
+    heading: 'Precios',
+    subtitle: 'Los precios indicados son orientativos. El presupuesto final depende del estado, tamaño y condiciones concretas de cada trabajo. Solicita tu presupuesto sin compromiso.',
+    tapTitle: 'Limpieza de Tapicerías',
+    cleanTitle: 'Limpieza de Pisos y Casas',
+    otherTitle: 'Otros servicios',
+    priceLabel: 'Precio',
+    noteLabel: '* Precios sin IVA. Desplazamiento incluido dentro de Espinosa de los Monteros.',
+    ctaLabel: 'Solicitar presupuesto gratuito',
+    tap: [
+      { item: 'Sillón / Butaca', price: '20 – 35 €' },
+      { item: 'Sofá de 2 plazas', price: '70 – 100 €' },
+      { item: 'Sofá de 3 plazas', price: '90 – 140 €' },
+      { item: 'Sofá chaise long / Rinconera', price: '120 – 200 €' },
+      { item: 'Colchón individual', price: '25 – 40 €' },
+      { item: 'Colchón doble / Matrimonio', price: '40 – 70 €' },
+    ],
+    clean: [
+      { item: 'Limpieza general', price: '13 € / hora' },
+      { item: 'Limpieza de cristales', price: '13 € / hora' },
+      { item: 'Limpieza de mantenimiento', price: '13 € / hora' },
+      { item: 'Limpieza profunda / Fin de obra', price: '4 – 6 € / m²' },
+      { item: 'Desplazamiento (fuera de Espinosa)', price: '1 € / km' },
+      { item: 'Otros servicios', price: 'Consultar' },
+    ],
+  },
+  en: {
+    badge: 'Indicative rates',
+    heading: 'Prices',
+    subtitle: 'Prices shown are indicative. The final quote depends on the condition, size and specific circumstances of each job. Request your free quote with no obligation.',
+    tapTitle: 'Upholstery Cleaning',
+    cleanTitle: 'Home & Flat Cleaning',
+    otherTitle: 'Other services',
+    priceLabel: 'Price',
+    noteLabel: '* Prices excl. VAT. Travel included within Espinosa de los Monteros.',
+    ctaLabel: 'Request a free quote',
+    tap: [
+      { item: 'Armchair', price: '20 – 35 €' },
+      { item: '2-seater sofa', price: '70 – 100 €' },
+      { item: '3-seater sofa', price: '90 – 140 €' },
+      { item: 'Chaise longue / Corner sofa', price: '120 – 200 €' },
+      { item: 'Single mattress', price: '25 – 40 €' },
+      { item: 'Double mattress', price: '40 – 70 €' },
+    ],
+    clean: [
+      { item: 'General cleaning', price: '13 € / hour' },
+      { item: 'Glass cleaning', price: '13 € / hour' },
+      { item: 'Maintenance cleaning', price: '13 € / hour' },
+      { item: 'Deep clean / Post-construction', price: '4 – 6 € / m²' },
+      { item: 'Travel (outside Espinosa)', price: '1 € / km' },
+      { item: 'Other services', price: 'On request' },
+    ],
+  },
+  de: {
+    badge: 'Richtwerte',
+    heading: 'Preise',
+    subtitle: 'Die angegebenen Preise sind Richtwerte. Das endgültige Angebot hängt vom Zustand, der Größe und den konkreten Bedingungen jedes Auftrags ab. Fordern Sie Ihr kostenloses Angebot an.',
+    tapTitle: 'Polsterreinigung',
+    cleanTitle: 'Wohnungs- & Hausreinigung',
+    otherTitle: 'Weitere Leistungen',
+    priceLabel: 'Preis',
+    noteLabel: '* Preise ohne MwSt. Anfahrt innerhalb von Espinosa de los Monteros inklusive.',
+    ctaLabel: 'Kostenloses Angebot anfordern',
+    tap: [
+      { item: 'Sessel', price: '20 – 35 €' },
+      { item: '2-Sitzer Sofa', price: '70 – 100 €' },
+      { item: '3-Sitzer Sofa', price: '90 – 140 €' },
+      { item: 'Chaiselongue / Ecksofa', price: '120 – 200 €' },
+      { item: 'Einzelmatratze', price: '25 – 40 €' },
+      { item: 'Doppelmatratze', price: '40 – 70 €' },
+    ],
+    clean: [
+      { item: 'Allgemeine Reinigung', price: '13 € / Stunde' },
+      { item: 'Glasreinigung', price: '13 € / Stunde' },
+      { item: 'Wartungsreinigung', price: '13 € / Stunde' },
+      { item: 'Grundreinigung / Baureinigung', price: '4 – 6 € / m²' },
+      { item: 'Anfahrt (außerhalb Espinosa)', price: '1 € / km' },
+      { item: 'Weitere Leistungen', price: 'Auf Anfrage' },
+    ],
+  },
+};
+
+const l = labels[lang];
+---
+
+<section class="py-20 md:py-28 bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="mb-14 border-l-4 border-eco-600 pl-6">
+      <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">{l.badge}</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">{l.heading}</h2>
+      <p class="text-gray-500 text-base max-w-2xl">{l.subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Tapicerías -->
+      <div class="border border-gray-200">
+        <div class="bg-eco-700 text-white px-6 py-4">
+          <h3 class="font-bold text-lg tracking-tight">{l.tapTitle}</h3>
+        </div>
+        <table class="w-full">
+          <tbody class="divide-y divide-gray-100">
+            {l.tap.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-6 py-4 text-gray-800 text-sm font-medium">{row.item}</td>
+                <td class="px-6 py-4 text-right text-eco-700 font-bold text-sm whitespace-nowrap">{row.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pisos / Casas -->
+      <div class="border border-gray-200">
+        <div class="bg-eco-700 text-white px-6 py-4">
+          <h3 class="font-bold text-lg tracking-tight">{l.cleanTitle}</h3>
+        </div>
+        <table class="w-full">
+          <tbody class="divide-y divide-gray-100">
+            {l.clean.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-6 py-4 text-gray-800 text-sm font-medium">{row.item}</td>
+                <td class="px-6 py-4 text-right text-eco-700 font-bold text-sm whitespace-nowrap">{row.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <p class="text-gray-400 text-xs mt-6">{l.noteLabel}</p>
+
+    <div class="mt-10">
+      <a href="tel:+34605984005"
+        class="inline-flex items-center gap-3 bg-eco-700 hover:bg-eco-800 text-white px-8 py-4 font-semibold text-sm transition-colors duration-150">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        {l.ctaLabel}
+      </a>
+    </div>
+
+  </div>
+</section>
