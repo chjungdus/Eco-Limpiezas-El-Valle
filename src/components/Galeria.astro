@@ -40,7 +40,7 @@ const galeryLabels = {
 
 const currentPhotos = photos[lang];
 const labels = galeryLabels[lang];
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const photoSrcs = [
   'van-logo.jpeg',
