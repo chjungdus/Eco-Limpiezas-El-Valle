@@ -13,6 +13,20 @@ const tr = t(lang);
 const pageTitle = title ?? tr.siteTitle;
 const pageDesc = description ?? tr.siteDescription;
 const ogLocale = { es: 'es_ES', en: 'en_GB', de: 'de_DE' }[lang];
+
+const siteUrl = 'https://limpiezas-el-valle.es';
+const pathname = Astro.url.pathname;
+
+// Derive the slug without language prefix for hreflang
+let baseSlug = pathname;
+if (pathname.startsWith('/en/')) baseSlug = pathname.slice(3);
+else if (pathname.startsWith('/de/')) baseSlug = pathname.slice(3);
+
+const canonicalUrl = `${siteUrl}${pathname}`;
+const esUrl = `${siteUrl}${baseSlug}`;
+const enUrl = `${siteUrl}/en${baseSlug}`;
+const deUrl = `${siteUrl}/de${baseSlug}`;
+const ogImage = `${siteUrl}/images/van-logo.jpeg`;
 ---
 
 <!doctype html>
@@ -23,13 +37,23 @@ const ogLocale = { es: 'es_ES', en: 'en_GB', de: 'de_DE' }[lang];
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
     <meta name="robots" content="index, follow" />
-    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- hreflang alternates -->
+    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="de" href={deUrl} />
+    <link rel="alternate" hreflang="x-default" href={esUrl} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDesc} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={ogLocale} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Limpiezas El Valle" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,20 +67,50 @@ const ogLocale = { es: 'es_ES', en: 'en_GB', de: 'de_DE' }[lang];
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "CleaningService",
+        "@id": "https://limpiezas-el-valle.es/#business",
         "name": "Limpiezas El Valle",
+        "url": "https://limpiezas-el-valle.es",
         "telephone": "+34605984005",
+        "image": "https://limpiezas-el-valle.es/images/van-logo.jpeg",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "C. de Gallemo, 4",
+          "addressLocality": "Espinosa de los Monteros",
+          "postalCode": "09560",
+          "addressRegion": "Burgos",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.0711,
+          "longitude": -3.5483
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        ],
         "areaServed": [
-          "Espinosa de los Monteros",
-          "Las Merindades",
-          "Burgos"
+          { "@type": "City", "name": "Espinosa de los Monteros" },
+          { "@type": "AdministrativeArea", "name": "Las Merindades" },
+          { "@type": "AdministrativeArea", "name": "Burgos" }
         ],
-        "serviceType": [
-          "Limpieza doméstica",
-          "Limpieza de fin de obra",
-          "Limpieza de tapicerías",
-          "Limpieza de cristales"
-        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de limpieza",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza doméstica" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de fin de obra" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de tapicerías" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de cristales" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de oficinas" } }
+          ]
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+34605984005",
@@ -66,7 +120,10 @@ const ogLocale = { es: 'es_ES', en: 'en_GB', de: 'de_DE' }[lang];
         "employee": {
           "@type": "Person",
           "name": "Davinia Gómez Baranda"
-        }
+        },
+        "sameAs": [
+          "https://wa.me/34605984005"
+        ]
       }
     </script>
 

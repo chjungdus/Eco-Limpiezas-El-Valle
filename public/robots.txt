@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://limpiezas-el-valle.es/sitemap-index.xml
