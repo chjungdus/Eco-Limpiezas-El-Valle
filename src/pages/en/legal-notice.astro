@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'en' as const;
+---
+<Layout lang={lang} title="Legal Notice | Limpiezas El Valle" description="Legal information for Limpiezas El Valle, professional cleaning services in Las Merindades, Burgos.">
+  <Header lang={lang} page="legal-notice" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Legal Notice</h1>
+      <p class="text-gray-400 text-sm mb-10">Last updated: May 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Business Information</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">In compliance with article 10 of Law 34/2002 on Information Society Services and Electronic Commerce (Spain), the following information is provided:</p>
+        <div class="bg-gray-50 rounded p-5 text-sm space-y-2">
+          <p><span class="font-semibold text-gray-700">Owner:</span> <span class="text-gray-600">Davinia Gómez Baranda</span></p>
+          <p><span class="font-semibold text-gray-700">Activity:</span> <span class="text-gray-600">Professional cleaning services</span></p>
+          <p><span class="font-semibold text-gray-700">Address:</span> <span class="text-gray-600">C. de Gallemo, 4 · 09560 Espinosa de los Monteros · Burgos · Spain</span></p>
+          <p><span class="font-semibold text-gray-700">Phone:</span> <a href="tel:+34605984005" class="text-eco-700 hover:underline">+34 605 984 005</a></p>
+          <p><span class="font-semibold text-gray-700">Website:</span> <span class="text-gray-600">limpiezas-el-valle.es</span></p>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Purpose and Terms of Use</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">This website provides information about the professional cleaning services offered by Davinia Gómez Baranda trading as Limpiezas El Valle.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Access to and use of this website implies full acceptance of these legal terms. The owner reserves the right to modify the website content and these terms at any time.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Intellectual Property</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">All website content (texts, images, graphic design, logos) is the property of Davinia Gómez Baranda or is used with authorisation from the respective rights holders.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Reproduction, distribution, public communication or transformation without express written authorisation is strictly prohibited.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Limitation of Liability</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">The owner does not guarantee the availability or continuity of the website and accepts no liability for damages caused by the use of the website or its content.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Applicable Law</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">These legal terms are governed by Spanish law. Any disputes arising from the use of this website shall be submitted to the courts of Burgos, Spain.</p>
+      </section>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'de' as const;
+---
+<Layout lang={lang} title="Datenschutzerklärung | Limpiezas El Valle" description="Datenschutzerklärung von Limpiezas El Valle gemäß DSGVO.">
+  <Header lang={lang} page="datenschutz" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Datenschutzerklärung</h1>
+      <p class="text-gray-400 text-sm mb-10">Stand: Mai 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Verantwortliche Person</h2>
+        <div class="bg-gray-50 rounded p-5 text-sm space-y-2">
+          <p><span class="font-semibold text-gray-700">Verantwortliche:</span> <span class="text-gray-600">Davinia Gómez Baranda</span></p>
+          <p><span class="font-semibold text-gray-700">Anschrift:</span> <span class="text-gray-600">C. de Gallemo, 4 · 09560 Espinosa de los Monteros · Burgos · Spanien</span></p>
+          <p><span class="font-semibold text-gray-700">Telefon:</span> <a href="tel:+34605984005" class="text-eco-700 hover:underline">+34 605 984 005</a></p>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Welche Daten wir erheben</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Diese Website enthält keine Kontaktformulare und erhebt keine personenbezogenen Daten automatisch. Die einzigen Kontaktmöglichkeiten sind Telefon und WhatsApp.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Wenn Sie uns per Telefon oder WhatsApp kontaktieren, werden die von Ihnen mitgeteilten Daten (Name, Telefonnummer, Anfrage) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Diese Website verwendet keine eigenen Cookies oder Tracking-Tools von Drittanbietern.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Zweck und Rechtsgrundlage der Verarbeitung</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="text-left p-3 font-semibold text-gray-700 border border-gray-200">Zweck</th>
+                <th class="text-left p-3 font-semibold text-gray-700 border border-gray-200">Rechtsgrundlage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 text-gray-600 border border-gray-200">Bearbeitung von Anfragen und Angeboten</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Einwilligung der betroffenen Person (Art. 6 Abs. 1 lit. a DSGVO)</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="p-3 text-gray-600 border border-gray-200">Durchführung des Servicevertrags</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO)</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-gray-600 border border-gray-200">Erfüllung gesetzlicher Pflichten (Buchhaltung, Steuern)</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Speicherdauer</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Anfragedaten werden nur so lange gespeichert, wie es zur Bearbeitung erforderlich ist. Kundendaten werden gemäß den gesetzlichen Aufbewahrungsfristen (10 Jahre für Geschäftsbücher gemäß spanischem Steuerrecht) aufbewahrt.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Ihre Rechte gemäß DSGVO</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Auskunft</strong> (Art. 15 DSGVO): Welche Daten wir über Sie gespeichert haben</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Berichtigung</strong> (Art. 16 DSGVO): Korrektur unrichtiger Daten</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Löschung</strong> (Art. 17 DSGVO): Löschen Ihrer Daten</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Widerspruch</strong> (Art. 21 DSGVO): Widerspruch gegen die Verarbeitung</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Einschränkung</strong> (Art. 18 DSGVO): Einschränkung der Verarbeitung</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO): Ihre Daten in maschinenlesbarem Format erhalten</span></li>
+        </ul>
+        <p class="text-gray-600 text-sm leading-relaxed mt-4">Zur Ausübung Ihrer Rechte wenden Sie sich bitte telefonisch an: <a href="tel:+34605984005" class="text-eco-700 hover:underline font-medium">+34 605 984 005</a></p>
+        <p class="text-gray-600 text-sm leading-relaxed mt-2">Sie haben zudem das Recht, eine Beschwerde bei der spanischen Datenschutzbehörde <strong>AEPD</strong> (www.aepd.es) oder der zuständigen deutschen Aufsichtsbehörde einzureichen.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">6. Hosting</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Diese Website wird über <strong>GitHub Pages</strong> (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. GitHub kann beim Abrufen der Seite technische Zugriffsdaten (IP-Adresse, Zeitstempel) erfassen. Weitere Informationen: <span class="text-gray-500">docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages</span></p>
+      </section>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

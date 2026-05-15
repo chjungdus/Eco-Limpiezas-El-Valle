@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const lang = 'es' as const;
+---
+<Layout lang={lang} title="Política de Privacidad | Limpiezas El Valle" description="Política de privacidad y protección de datos de Limpiezas El Valle conforme al RGPD.">
+  <Header lang={lang} page="privacidad" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Política de Privacidad</h1>
+      <p class="text-gray-400 text-sm mb-10">Última actualización: mayo 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Responsable del tratamiento</h2>
+        <div class="bg-gray-50 rounded p-5 text-sm space-y-2">
+          <p><span class="font-semibold text-gray-700">Responsable:</span> <span class="text-gray-600">Davinia Gómez Baranda</span></p>
+          <p><span class="font-semibold text-gray-700">Domicilio:</span> <span class="text-gray-600">C. de Gallemo, 4 · 09560 Espinosa de los Monteros · Burgos · España</span></p>
+          <p><span class="font-semibold text-gray-700">Teléfono:</span> <a href="tel:+34605984005" class="text-eco-700 hover:underline">+34 605 984 005</a></p>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Datos que recopilamos</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Este sitio web no dispone de formularios de contacto ni recoge datos personales de forma automatizada. El único canal de contacto disponible es el teléfono y WhatsApp.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Cuando usted contacta con nosotros por teléfono o WhatsApp, los datos que nos facilite (nombre, número de teléfono y consulta) serán tratados con la única finalidad de atender su solicitud.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">El sitio web no utiliza cookies propias ni de terceros para rastrear a los usuarios.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Finalidad y base jurídica del tratamiento</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="text-left p-3 font-semibold text-gray-700 border border-gray-200">Finalidad</th>
+                <th class="text-left p-3 font-semibold text-gray-700 border border-gray-200">Base jurídica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 text-gray-600 border border-gray-200">Atender consultas y solicitudes de presupuesto</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Consentimiento del interesado (art. 6.1.a RGPD)</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="p-3 text-gray-600 border border-gray-200">Gestión de la relación contractual con clientes</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Ejecución de un contrato (art. 6.1.b RGPD)</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-gray-600 border border-gray-200">Cumplimiento de obligaciones legales y fiscales</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Obligación legal (art. 6.1.c RGPD)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Plazo de conservación</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Los datos de contacto se conservarán únicamente durante el tiempo necesario para atender la consulta. Los datos de clientes se conservarán durante el período legalmente exigido (5 años para obligaciones fiscales y mercantiles).</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Sus derechos</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Conforme al Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), usted tiene derecho a:</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Acceso:</strong> conocer qué datos suyos tratamos</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Rectificación:</strong> corregir datos inexactos o incompletos</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Supresión:</strong> solicitar la eliminación de sus datos</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Oposición:</strong> oponerse al tratamiento de sus datos</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Limitación:</strong> solicitar la limitación del tratamiento</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Portabilidad:</strong> recibir sus datos en formato electrónico</span></li>
+        </ul>
+        <p class="text-gray-600 text-sm leading-relaxed mt-4">Para ejercer estos derechos contacte por teléfono: <a href="tel:+34605984005" class="text-eco-700 hover:underline font-medium">+34 605 984 005</a></p>
+        <p class="text-gray-600 text-sm leading-relaxed mt-2">Si considera que sus derechos no han sido atendidos correctamente, puede presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (www.aepd.es).</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">6. Seguridad</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Adoptamos las medidas técnicas y organizativas necesarias para garantizar la seguridad de sus datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado.</p>
+      </section>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

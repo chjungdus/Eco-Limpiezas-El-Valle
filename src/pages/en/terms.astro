@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'en' as const;
+---
+<Layout lang={lang} title="Terms & Conditions | Limpiezas El Valle" description="Terms and conditions for cleaning services provided by Limpiezas El Valle.">
+  <Header lang={lang} page="terms" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Terms &amp; Conditions</h1>
+      <p class="text-gray-400 text-sm mb-10">Last updated: May 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Scope</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">These terms and conditions apply to all cleaning services provided by Davinia Gómez Baranda trading as Limpiezas El Valle to private and business clients in Las Merindades and the province of Burgos, Spain.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Services</h2>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Domestic cleaning (homes, flats, rural houses)</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Post-construction cleaning after renovations and new builds</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Upholstery cleaning (sofas, armchairs, mattresses) with professional Kärcher equipment</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Glass cleaning (interior and exterior)</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Offices, commercial premises and residents' associations</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Quotes and Pricing</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Indicative prices are available on the services page. A binding quote is provided after assessment of the specific job, free of charge and with no obligation.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">For jobs outside Espinosa de los Monteros, a travel surcharge of <strong>€1 per kilometre</strong> applies.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">All prices include labour and professional equipment. Cleaning products may be included or provided by the client as agreed.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Booking</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Bookings are made by phone or WhatsApp. A booking is confirmed once both parties have agreed on the date, time, type of service and price.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Limpiezas El Valle reserves the right to refuse or cancel a service if the actual conditions do not match those agreed.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Cancellation and Changes</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">The client may cancel or reschedule free of charge with at least <strong>24 hours' notice</strong>.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Cancellations with less than 24 hours' notice or client no-shows may incur a partial charge to cover travel costs.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">6. Payment</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Payment is due on completion of the service unless otherwise agreed. Accepted payment methods:</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Cash</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Bank transfer</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Bizum (Spanish payment service)</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">7. Liability</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Limpiezas El Valle carries out all work with the utmost care and professionalism. We accept liability for damages directly caused by our work in accordance with applicable law.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">We accept no liability for pre-existing damage or damage caused by unsuitable materials provided by the client.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">8. Applicable Law</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">These terms are governed by Spanish law. Any disputes shall be submitted to the courts of Burgos, Spain.</p>
+      </section>
+
+      <div class="bg-eco-50 border border-eco-200 rounded p-5 mt-8">
+        <p class="text-eco-800 text-sm font-medium mb-1">Questions about our terms?</p>
+        <p class="text-eco-700 text-sm">Call us or message us on WhatsApp: <a href="tel:+34605984005" class="font-bold hover:underline">+34 605 984 005</a></p>
+      </div>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

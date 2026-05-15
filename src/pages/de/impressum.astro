@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'de' as const;
+---
+<Layout lang={lang} title="Impressum | Limpiezas El Valle" description="Rechtliche Informationen und Impressum von Limpiezas El Valle, professioneller Reinigungsservice in Las Merindades, Burgos.">
+  <Header lang={lang} page="impressum" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Impressum</h1>
+      <p class="text-gray-400 text-sm mb-10">Stand: Mai 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">Angaben gemäß § 5 TMG / Informationspflicht</h2>
+        <div class="bg-gray-50 rounded p-5 text-sm space-y-2">
+          <p><span class="font-semibold text-gray-700">Inhaberin:</span> <span class="text-gray-600">Davinia Gómez Baranda</span></p>
+          <p><span class="font-semibold text-gray-700">Tätigkeit:</span> <span class="text-gray-600">Professionelle Reinigungsdienstleistungen</span></p>
+          <p><span class="font-semibold text-gray-700">Anschrift:</span> <span class="text-gray-600">C. de Gallemo, 4 · 09560 Espinosa de los Monteros · Burgos · Spanien</span></p>
+          <p><span class="font-semibold text-gray-700">Telefon:</span> <a href="tel:+34605984005" class="text-eco-700 hover:underline">+34 605 984 005</a></p>
+          <p><span class="font-semibold text-gray-700">Website:</span> <span class="text-gray-600">limpiezas-el-valle.es</span></p>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">Zweck der Website</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Diese Website dient der Information über die professionellen Reinigungsdienstleistungen von Limpiezas El Valle in der Region Las Merindades, Burgos (Spanien). Es bestehen keine Online-Kaufmöglichkeiten oder Formulare zur Datenerhebung.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">Urheberrecht</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Alle Inhalte dieser Website (Texte, Bilder, Grafiken, Logos) sind Eigentum von Davinia Gómez Baranda oder werden mit Genehmigung der jeweiligen Rechteinhaber verwendet.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Vervielfältigung, Verbreitung oder öffentliche Wiedergabe ohne ausdrückliche schriftliche Genehmigung sind untersagt.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">Haftungsausschluss</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Die Inhaberin übernimmt keine Gewähr für die Aktualität, Richtigkeit und Vollständigkeit der bereitgestellten Informationen. Haftungsansprüche gegen die Inhaberin wegen Schäden materieller oder ideeller Art, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen entstanden sind, sind grundsätzlich ausgeschlossen.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Für externe Links übernimmt die Inhaberin keine Haftung. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Eine ständige inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">Anwendbares Recht</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Diese Website unterliegt dem spanischen Recht. Für Streitigkeiten sind die zuständigen Gerichte in Burgos (Spanien) zuständig.</p>
+      </section>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

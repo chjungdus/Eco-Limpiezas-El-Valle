@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'de' as const;
+---
+<Layout lang={lang} title="AGB | Limpiezas El Valle" description="Allgemeine Geschäftsbedingungen von Limpiezas El Valle für professionelle Reinigungsdienstleistungen.">
+  <Header lang={lang} page="agb" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Allgemeine Geschäftsbedingungen</h1>
+      <p class="text-gray-400 text-sm mb-10">Stand: Mai 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Geltungsbereich</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Diese Allgemeinen Geschäftsbedingungen gelten für alle Reinigungsdienstleistungen von Davinia Gómez Baranda (Limpiezas El Valle) für Privat- und Geschäftskunden in der Region Las Merindades und Burgos (Spanien).</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Leistungsangebot</h2>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Haushaltsreinigung (Wohnungen, Häuser, Ferienhäuser)</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Baureinigung nach Renovierungen und Neubauten</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Polsterreinigung (Sofas, Sessel, Matratzen) mit professioneller Kärcher-Technik</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Glasreinigung (innen und außen)</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Büros, Geschäftsräume und Wohnungseigentümergemeinschaften</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Angebote und Preise</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Richtwerte für die Preise sind auf der Serviceseite angegeben. Das verbindliche Angebot wird nach Bewertung des konkreten Auftrags erstellt, unverbindlich und kostenlos.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Für Einsätze außerhalb von Espinosa de los Monteros wird ein Kilometerzuschlag von <strong>1 € pro km</strong> berechnet.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Alle Preise verstehen sich inklusive Arbeitskraft und professionellem Gerät. Reinigungsmittel können je nach Vereinbarung inbegriffen sein oder vom Kunden gestellt werden.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Auftragserteilung</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Die Auftragserteilung erfolgt telefonisch oder per WhatsApp. Der Auftrag gilt als bestätigt, sobald beide Parteien Datum, Uhrzeit, Art der Leistung und Preis vereinbart haben.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Limpiezas El Valle behält sich das Recht vor, einen Auftrag abzulehnen oder zu stornieren, wenn die tatsächlichen Bedingungen des Einsatzes nicht mit den vereinbarten übereinstimmen.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Stornierung und Änderungen</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Der Kunde kann den Auftrag bis <strong>24 Stunden vor dem vereinbarten Termin</strong> kostenfrei stornieren oder verschieben.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Bei Stornierungen mit weniger als 24 Stunden Vorlauf oder Nichtanwesenheit des Kunden kann eine Aufwandspauschale zur Deckung der Anfahrtskosten berechnet werden.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">6. Zahlung</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Die Zahlung erfolgt nach Abschluss der Arbeiten, sofern nicht anders vereinbart. Akzeptierte Zahlungsmethoden:</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Barzahlung</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Banküberweisung</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Bizum (spanischer Zahlungsservice)</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">7. Haftung</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Limpiezas El Valle führt alle Arbeiten mit größtmöglicher Sorgfalt und Professionalität durch. Bei direkt durch unsere Tätigkeit verursachten Schäden haften wir gemäß den geltenden Rechtsvorschriften.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Für vorbestehende Schäden oder Schäden durch ungeeignete, vom Kunden bereitgestellte Materialien übernehmen wir keine Haftung.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">8. Anwendbares Recht</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Diese AGB unterliegen dem spanischen Recht. Für Streitigkeiten sind ausschließlich die Gerichte in Burgos (Spanien) zuständig.</p>
+      </section>
+
+      <div class="bg-eco-50 border border-eco-200 rounded p-5 mt-8">
+        <p class="text-eco-800 text-sm font-medium mb-1">Fragen zu unseren AGB?</p>
+        <p class="text-eco-700 text-sm">Rufen Sie uns an oder schreiben Sie uns auf WhatsApp: <a href="tel:+34605984005" class="font-bold hover:underline">+34 605 984 005</a></p>
+      </div>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

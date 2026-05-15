@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'en' as const;
+---
+<Layout lang={lang} title="Privacy Policy | Limpiezas El Valle" description="Privacy policy of Limpiezas El Valle in accordance with GDPR.">
+  <Header lang={lang} page="privacy" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
+      <p class="text-gray-400 text-sm mb-10">Last updated: May 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Data Controller</h2>
+        <div class="bg-gray-50 rounded p-5 text-sm space-y-2">
+          <p><span class="font-semibold text-gray-700">Controller:</span> <span class="text-gray-600">Davinia Gómez Baranda</span></p>
+          <p><span class="font-semibold text-gray-700">Address:</span> <span class="text-gray-600">C. de Gallemo, 4 · 09560 Espinosa de los Monteros · Burgos · Spain</span></p>
+          <p><span class="font-semibold text-gray-700">Phone:</span> <a href="tel:+34605984005" class="text-eco-700 hover:underline">+34 605 984 005</a></p>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Data We Collect</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">This website does not include contact forms and does not automatically collect personal data. The only contact channels available are phone and WhatsApp.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">When you contact us by phone or WhatsApp, the data you provide (name, phone number, enquiry) will be used solely to respond to your request.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">This website does not use cookies or third-party tracking tools.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Purpose and Legal Basis</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="text-left p-3 font-semibold text-gray-700 border border-gray-200">Purpose</th>
+                <th class="text-left p-3 font-semibold text-gray-700 border border-gray-200">Legal Basis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 text-gray-600 border border-gray-200">Responding to enquiries and quotes</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Consent of the data subject (Art. 6(1)(a) GDPR)</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="p-3 text-gray-600 border border-gray-200">Managing the service contract</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Contract performance (Art. 6(1)(b) GDPR)</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-gray-600 border border-gray-200">Compliance with legal obligations</td>
+                <td class="p-3 text-gray-600 border border-gray-200">Legal obligation (Art. 6(1)(c) GDPR)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Retention Period</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Enquiry data is kept only as long as necessary to handle the request. Client data is retained for the legally required period (5 years for tax and accounting obligations under Spanish law).</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Your Rights</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Under the GDPR you have the following rights regarding your personal data:</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Access:</strong> find out what data we hold about you</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Rectification:</strong> correct inaccurate or incomplete data</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Erasure:</strong> request deletion of your data</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Objection:</strong> object to the processing of your data</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Restriction:</strong> request restriction of processing</span></li>
+          <li class="flex gap-2"><span class="text-eco-600 font-bold">→</span> <span><strong>Portability:</strong> receive your data in a machine-readable format</span></li>
+        </ul>
+        <p class="text-gray-600 text-sm leading-relaxed mt-4">To exercise these rights, please contact us by phone: <a href="tel:+34605984005" class="text-eco-700 hover:underline font-medium">+34 605 984 005</a></p>
+        <p class="text-gray-600 text-sm leading-relaxed mt-2">You also have the right to lodge a complaint with the Spanish data protection authority <strong>AEPD</strong> (www.aepd.es).</p>
+      </section>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const lang = 'es' as const;
+---
+<Layout lang={lang} title="Condiciones Generales | Limpiezas El Valle" description="Condiciones generales de contratación de los servicios de limpieza de Limpiezas El Valle.">
+  <Header lang={lang} page="condiciones" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Condiciones Generales</h1>
+      <p class="text-gray-400 text-sm mb-10">Última actualización: mayo 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Objeto</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Las presentes condiciones generales regulan la contratación de los servicios de limpieza profesional prestados por Davinia Gómez Baranda (Limpiezas El Valle) a particulares y empresas en Las Merindades y Burgos.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Servicios ofrecidos</h2>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Limpiezas domésticas (hogares, pisos, casas rurales)</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Limpieza de fin de obra tras reformas y construcciones</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Limpieza de tapicerías (sofás, sillones, colchones) con maquinaria Kärcher profesional</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Limpieza de cristales interiores y exteriores</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Limpieza de oficinas, locales comerciales y comunidades de vecinos</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Presupuestos y precios</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Los precios indicativos están disponibles en la página de servicios. El presupuesto definitivo se facilita previa valoración del trabajo concreto, sin compromiso.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Para trabajos fuera del municipio de Espinosa de los Monteros se aplica un suplemento de <strong>1 € por kilómetro</strong> de desplazamiento.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Los precios incluyen mano de obra y maquinaria profesional. Los productos de limpieza pueden incluirse o aportarse por el cliente según acuerdo.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Contratación</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">La contratación se realiza directamente por teléfono o WhatsApp. El servicio queda confirmado una vez acordadas las condiciones (fecha, hora, tipo de servicio y precio) entre ambas partes.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Limpiezas El Valle se reserva el derecho de rechazar o cancelar un servicio si las condiciones del trabajo no se corresponden con lo acordado.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Cancelación y cambios</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">El cliente podrá cancelar o modificar el servicio contratado con un mínimo de <strong>24 horas de antelación</strong> sin coste alguno.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Las cancelaciones con menos de 24 horas de antelación o la no presencia del cliente en el momento del servicio podrán conllevar el cobro parcial del servicio acordado para cubrir los gastos de desplazamiento.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">6. Pago</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">El pago se realizará al finalizar el servicio, salvo acuerdo previo distinto. Se aceptan los siguientes medios de pago:</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Efectivo</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Transferencia bancaria</li>
+          <li class="flex gap-2"><span class="text-eco-600">→</span> Bizum</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">7. Responsabilidad</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Limpiezas El Valle realiza sus servicios con la máxima diligencia y profesionalidad. En caso de daños causados directamente por nuestra actuación, responderemos de acuerdo con la legislación aplicable.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">No nos hacemos responsables de daños preexistentes o de aquellos causados por el uso de materiales inadecuados facilitados por el cliente.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">8. Legislación aplicable</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Estas condiciones se rigen por la legislación española. Cualquier controversia se someterá a los Juzgados y Tribunales de Burgos.</p>
+      </section>
+
+      <div class="bg-eco-50 border border-eco-200 rounded p-5 mt-8">
+        <p class="text-eco-800 text-sm font-medium mb-1">¿Tienes alguna pregunta?</p>
+        <p class="text-eco-700 text-sm">Llámanos o escríbenos por WhatsApp: <a href="tel:+34605984005" class="font-bold hover:underline">+34 605 984 005</a></p>
+      </div>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>

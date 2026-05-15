@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const lang = 'es' as const;
+---
+<Layout lang={lang} title="Aviso Legal | Limpiezas El Valle" description="Información legal de Limpiezas El Valle, servicios de limpieza profesional en Las Merindades, Burgos.">
+  <Header lang={lang} page="aviso-legal" />
+  <main class="bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Aviso Legal</h1>
+      <p class="text-gray-400 text-sm mb-10">Última actualización: mayo 2025</p>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. Datos identificativos del titular</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se informa al usuario de los datos del titular del sitio web:</p>
+        <div class="bg-gray-50 rounded p-5 text-sm space-y-2">
+          <p><span class="font-semibold text-gray-700">Titular:</span> <span class="text-gray-600">Davinia Gómez Baranda</span></p>
+          <p><span class="font-semibold text-gray-700">Actividad:</span> <span class="text-gray-600">Servicios de limpieza profesional</span></p>
+          <p><span class="font-semibold text-gray-700">Domicilio:</span> <span class="text-gray-600">C. de Gallemo, 4 · 09560 Espinosa de los Monteros · Burgos · España</span></p>
+          <p><span class="font-semibold text-gray-700">Teléfono:</span> <a href="tel:+34605984005" class="text-eco-700 hover:underline">+34 605 984 005</a></p>
+          <p><span class="font-semibold text-gray-700">Web:</span> <span class="text-gray-600">limpiezas-el-valle.es</span></p>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. Objeto y condiciones de uso</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">El presente sitio web tiene por objeto ofrecer información sobre los servicios de limpieza profesional prestados por Davinia Gómez Baranda bajo la marca Limpiezas El Valle.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">El acceso y uso de este sitio web implica la aceptación plena y sin reservas de las presentes condiciones de uso. El titular se reserva el derecho de modificar en cualquier momento el contenido del sitio web, así como las presentes condiciones legales.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">3. Propiedad intelectual</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">Todos los contenidos del sitio web (textos, imágenes, diseño gráfico, logotipos y cualquier otro elemento) son propiedad de Davinia Gómez Baranda o se utilizan con autorización de sus legítimos titulares.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Queda expresamente prohibida su reproducción, distribución, comunicación pública o transformación sin autorización expresa y por escrito del titular.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">4. Limitación de responsabilidad</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">El titular no garantiza la disponibilidad y continuidad del funcionamiento del sitio web. Tampoco garantiza la ausencia de virus u otros elementos en los contenidos que puedan producir alteraciones en el sistema informático del usuario.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">El titular no será responsable de los daños y perjuicios causados por el uso del sitio web o de los contenidos por parte del usuario.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">5. Legislación aplicable y jurisdicción</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Las presentes condiciones legales se rigen por la legislación española. Para la resolución de cualquier conflicto derivado del uso del sitio web, las partes se someten a los Juzgados y Tribunales de Burgos, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.</p>
+      </section>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>
