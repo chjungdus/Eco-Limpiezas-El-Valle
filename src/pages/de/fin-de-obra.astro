@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const lang = 'de' as const;
+---
+<Layout lang={lang} title="Baureinigung in Las Merindades | Neubau und Renovierung · Limpiezas El Valle" description="Spezialisierte Baureinigung nach Renovierungen und Neubauten in Las Merindades, Burgos. Entfernung von Gipsstaub, Silikon und Bauschutt. Angebot nach m².">
+  <Header lang={lang} page="fin-de-obra" />
+  <main class="bg-white">
+    <section class="bg-eco-900 text-white py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="inline-block bg-eco-700 text-eco-100 text-xs font-bold uppercase tracking-widest px-3 py-1 mb-6">Baureinigung · Las Merindades</span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+          Baureinigung in<br class="hidden sm:block"/> Las Merindades und Burgos
+        </h1>
+        <p class="text-eco-200 text-lg md:text-xl max-w-2xl mb-8">Spezialisierte Reinigung nach Renovierungen, Neubauten und Sanierungen. Wir entfernen Gipsstaub, Silikon, Baureste und Farbspritzer, damit der Raum vom ersten Tag an bezugsfertig ist.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:+34605984005" class="inline-flex items-center justify-center gap-2 bg-white text-eco-900 hover:bg-eco-100 px-6 py-3 font-bold text-sm transition-colors duration-150">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Anrufen: 605 984 005
+          </a>
+          <a href="https://wa.me/34605984005?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-eco-800 px-6 py-3 font-bold text-sm transition-colors duration-150">Angebot per WhatsApp</a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 md:py-20 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-l-4 border-eco-600 pl-6 mb-12">
+          <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Vollständiger Service</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Was beinhaltet die Baureinigung?</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {['Entfernung von Gips- und Baustaub','Reinigung von Böden, Fliesen und neuen Oberflächen','Beseitigung von Baumaterialresten','Fenster und Rahmen: Farbspritzer und Aufkleber entfernen','Neu installierte Sanitäranlagen und Küchen','Farbe und Silikon von Oberflächen entfernen','Fassaden, Zugänge und Gemeinschaftsbereiche','Saugen und Wischen aller Räume'].map(item => (
+            <div class="flex items-start gap-3 bg-white border border-gray-100 p-4">
+              <svg class="w-4 h-4 text-eco-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span class="text-gray-700 text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-l-4 border-eco-600 pl-6 mb-10">
+          <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Richtwerte</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Preise für Baureinigung</h2>
+        </div>
+        <div class="border border-gray-200">
+          <div class="bg-eco-900 text-white px-5 py-3 grid grid-cols-2">
+            <span class="text-xs font-bold uppercase tracking-wider">Objekttyp</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-right">Preis ab</span>
+          </div>
+          {[{item:'Wohnung / Apartment',price:'150 €'},{item:'Einfamilienhaus',price:'250 €'},{item:'Gewerberaum',price:'200 €'},{item:'Anfahrt außerhalb Espinosa',price:'+1 €/km'}].map(row => (
+            <div class="flex items-center justify-between px-5 py-3.5 border-b border-gray-100 last:border-0 even:bg-gray-50">
+              <span class="text-sm text-gray-700">{row.item}</span>
+              <span class="text-sm font-bold text-eco-700">ab {row.price}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-gray-400 text-xs mt-4">Auch Preisangebote nach m² möglich (4–6 €/m²). Zzgl. MwSt.</p>
+      </div>
+    </section>
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">Haben Sie ein fertiges Bauprojekt, das gereinigt werden muss?</h2>
+        <p class="text-gray-500 mb-8 text-lg">Rufen Sie uns an oder schreiben Sie uns — wir erstellen ein Angebot nach Ihren Quadratmetern. Wir arbeiten in Espinosa de los Monteros und der gesamten Comarca Las Merindades.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+34605984005" class="inline-flex items-center justify-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-8 py-4 font-bold text-base transition-colors duration-150">+34 605 984 005</a>
+          <a href="https://wa.me/34605984005?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-eco-700 text-eco-700 hover:bg-eco-50 px-8 py-4 font-bold text-base transition-colors duration-150">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>
