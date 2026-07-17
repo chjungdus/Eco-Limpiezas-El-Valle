@@ -3,8 +3,8 @@ export type Lang = 'es' | 'en' | 'de';
 export const translations = {
   es: {
     // Meta
-    siteTitle: 'Limpiezas El Valle | Limpieza Profesional en Merindades, Burgos',
-    siteDescription: 'Empresa de limpieza profesional en Espinosa de los Monteros y Las Merindades, Burgos. Doméstica, fin de obra, tapicerías y cristales. Horarios flexibles.',
+    siteTitle: 'Limpiezas El Valle | Limpieza en Espinosa de los Monteros y Las Merindades',
+    siteDescription: 'Empresa de limpieza profesional en Espinosa de los Monteros y Las Merindades, Burgos. Doméstica, fin de obra, tapicerías y cristales. Presupuesto sin compromiso.',
 
     // Header
     navHome: 'Inicio',
