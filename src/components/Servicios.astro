@@ -238,11 +238,20 @@ const currentServices = services[lang];
               ))}
             </div>
 
-            <a href="tel:+34605984005"
-              class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-5 py-2.5 font-semibold text-sm transition-colors duration-150 w-fit">
-              {tr.servicesCta}
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </a>
+            <div class="flex flex-wrap gap-3">
+              <a href="tel:+34605984005"
+                class="inline-flex items-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-5 py-2.5 font-semibold text-sm transition-colors duration-150">
+                {tr.servicesCta}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+              {service.detailLink && (
+                <a href={serviceLinks[lang][service.detailLink]}
+                  class="inline-flex items-center gap-2 border border-eco-700 text-eco-700 hover:bg-eco-50 px-5 py-2.5 font-semibold text-sm transition-colors duration-150">
+                  {moreLabel[lang]}
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       ))}
