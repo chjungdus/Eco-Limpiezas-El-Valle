@@ -4,7 +4,7 @@ export const translations = {
   es: {
     // Meta
     siteTitle: 'Limpiezas El Valle | Limpieza en Espinosa de los Monteros y Las Merindades',
-    siteDescription: 'Empresa de limpieza profesional en Espinosa de los Monteros y Las Merindades, Burgos. Doméstica, fin de obra, tapicerías y cristales. Presupuesto sin compromiso.',
+    siteDescription: 'Empresa de limpieza profesional en Espinosa de los Monteros y Las Merindades. Limpieza doméstica, fin de obra, tapicerías, limpieza profunda y cristales. Presupuesto sin compromiso.',
 
     // Header
     navHome: 'Inicio',
@@ -120,7 +120,7 @@ export const translations = {
     // Contacto
     sectionContactLabel: 'Estamos disponibles',
     sectionContactTitle: 'Contacto',
-    sectionContactSubtitle: 'Puedes contactar con nosotros por teléfono o WhatsApp. Atendemos de lunes a viernes de 9:00 a 19:00 h. Respondemos con rapidez.',
+    sectionContactSubtitle: 'Puedes contactar con nosotros por teléfono o WhatsApp. Atendemos de lunes a viernes de 9:00 a 19:00 h.',
     contactResponsable: 'Responsable',
     contactRole: 'Responsable · Limpiezas El Valle',
     contactPhoneLabel: 'Teléfono / WhatsApp',
@@ -156,8 +156,8 @@ export const translations = {
   },
 
   en: {
-    siteTitle: 'Limpiezas El Valle | Professional Cleaning in Merindades, Burgos',
-    siteDescription: 'Professional cleaning company in Espinosa de los Monteros and Las Merindades, Burgos. Domestic, post-construction, upholstery and glass cleaning. Flexible hours.',
+    siteTitle: 'Limpiezas El Valle | Cleaning Service in Espinosa de los Monteros & Las Merindades',
+    siteDescription: 'Professional cleaning company in Espinosa de los Monteros and Las Merindades. Domestic, post-construction, upholstery, deep cleaning and glass. Free quote.',
 
     navHome: 'Home',
     navServices: 'Services',
@@ -262,11 +262,11 @@ export const translations = {
 
     sectionContactLabel: 'We are available',
     sectionContactTitle: 'Contact',
-    sectionContactSubtitle: 'You can contact us by phone or WhatsApp. We are available Monday to Friday, 9:00–19:00. We respond quickly.',
+    sectionContactSubtitle: 'You can contact us by phone or WhatsApp. Available Monday to Friday, 9:00–19:00.',
     contactResponsable: 'Contact person',
     contactRole: 'Owner · Limpiezas El Valle',
     contactPhoneLabel: 'Phone / WhatsApp',
-    contactHours: 'Available Monday to Friday, 9:00–19:00.',
+    contactHours: 'Opening hours: Monday to Friday, 9:00–19:00.',
     contactZone: 'Espinosa de los Monteros — Las Merindades, Burgos',
     contactFree: 'Free quote, no commitment whatsoever.',
     contactCallBtn: 'Call now',
@@ -296,8 +296,8 @@ export const translations = {
   },
 
   de: {
-    siteTitle: 'Limpiezas El Valle | Professionelle Reinigung in Merindades, Burgos',
-    siteDescription: 'Professionelles Reinigungsunternehmen in Espinosa de los Monteros und Las Merindades, Burgos. Haushaltsreinigung, Baureinigung, Polsterreinigung und Glasreinigung. Flexible Arbeitszeiten.',
+    siteTitle: 'Limpiezas El Valle | Reinigungsservice in Espinosa de los Monteros & Las Merindades',
+    siteDescription: 'Professionelles Reinigungsunternehmen in Espinosa de los Monteros und Las Merindades. Haushalts-, Bau-, Polster- und Grundreinigung sowie Glasreinigung. Kostenloser Kostenvoranschlag.',
 
     navHome: 'Start',
     navServices: 'Leistungen',
@@ -402,11 +402,11 @@ export const translations = {
 
     sectionContactLabel: 'Wir sind erreichbar',
     sectionContactTitle: 'Kontakt',
-    sectionContactSubtitle: 'Sie können uns per Telefon oder WhatsApp erreichen. Wir sind montags bis freitags von 9:00 bis 19:00 Uhr für Sie da.',
+    sectionContactSubtitle: 'Sie können uns per Telefon oder WhatsApp erreichen. Erreichbar montags bis freitags von 9:00 bis 19:00 Uhr.',
     contactResponsable: 'Ansprechperson',
     contactRole: 'Inhaberin · Limpiezas El Valle',
     contactPhoneLabel: 'Telefon / WhatsApp',
-    contactHours: 'Erreichbar montags bis freitags von 9:00 bis 19:00 Uhr.',
+    contactHours: 'Geschäftszeiten: Montag bis Freitag, 9:00–19:00 Uhr.',
     contactZone: 'Espinosa de los Monteros — Las Merindades, Burgos',
     contactFree: 'Kostenloses Angebot, völlig unverbindlich.',
     contactCallBtn: 'Jetzt anrufen',

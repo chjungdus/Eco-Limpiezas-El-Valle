@@ -3,154 +3,124 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 const lang = 'en' as const;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const phone = 'tel:+34605984005';
+const whatsapp = 'https://wa.me/34605984005?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote';
 ---
-<Layout lang={lang} title="Upholstery Cleaning in Espinosa de los Monteros | Sofas, Armchairs, Mattresses · Limpiezas El Valle" description="Professional upholstery cleaning with Kärcher equipment in Espinosa de los Monteros and Las Merindades. Sofas, armchairs, mattresses. From €40. Free quote.">
-  <Header lang={lang} page="tapiceria" />
-  <main class="bg-white">
+<Layout lang={lang} title="Upholstery Cleaning in Espinosa de los Monteros | Sofas & Armchairs · Limpiezas El Valle" description="Professional upholstery cleaning with Kärcher in Espinosa de los Monteros and Las Merindades. Sofas, armchairs, mattresses. From €40. Call or WhatsApp us.">
+  <Header lang={lang} page="" />
+  <main>
 
-    <!-- Hero -->
-    <section class="bg-eco-900 text-white py-16 md:py-24">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span class="inline-block bg-eco-700 text-eco-100 text-xs font-bold uppercase tracking-widest px-3 py-1 mb-6">Upholstery · Las Merindades</span>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-          Upholstery Cleaning in<br class="hidden sm:block"/> Espinosa de los Monteros
+    <!-- HERO -->
+    <section class="bg-eco-900 text-white py-20 md:py-28">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-block bg-eco-700 text-eco-100 text-xs font-semibold px-4 py-1.5 mb-6 uppercase tracking-widest">Upholstery Cleaning · Las Merindades</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+          Upholstery Cleaning<br/>in <span class="text-eco-400">Espinosa de los Monteros</span>
         </h1>
-        <p class="text-eco-200 text-lg md:text-xl max-w-2xl mb-8">
-          Sofas, armchairs, mattresses and upholstered chairs. Professional Kärcher injection and extraction equipment to remove dust, mites, stains and odours from any fabric.
+        <p class="text-eco-200 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+          Restore your sofas, armchairs and mattresses with our professional Kärcher injection and extraction cleaning service. We remove dust, mites, stains and odours thoroughly.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="tel:+34605984005"
-            class="inline-flex items-center justify-center gap-2 bg-white text-eco-900 hover:bg-eco-100 px-6 py-3 font-bold text-sm transition-colors duration-150">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-            </svg>
-            Call: 605 984 005
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={phone} class="inline-flex items-center justify-center gap-3 bg-white text-eco-900 hover:bg-eco-50 px-8 py-4 font-bold text-base transition-colors duration-150">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Request a quote
           </a>
-          <a href="https://wa.me/34605984005?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto"
-            target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-eco-800 px-6 py-3 font-bold text-sm transition-colors duration-150">
-            Free Quote via WhatsApp
+          <a href={whatsapp} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 border border-eco-500 text-eco-200 hover:bg-eco-800 px-8 py-4 font-bold text-base transition-colors duration-150">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
           </a>
         </div>
       </div>
     </section>
 
-    <!-- What's included -->
+    <!-- WHAT'S INCLUDED -->
     <section class="py-16 md:py-20 bg-gray-50">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="border-l-4 border-eco-600 pl-6 mb-12">
-          <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Full service</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">What's included in upholstery cleaning?</h2>
+        <div class="border-l-4 border-eco-600 pl-6 mb-10">
+          <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Full process</span>
+          <h2 class="text-3xl font-extrabold text-gray-900">What's included?</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            'Two and three-seater sofas, corner sofas and chaise longues',
-            'Armchairs and easy chairs of any upholstery',
-            'Single and double mattresses',
-            'Dining chairs and upholstered stools',
-            'Headboards and upholstered benches',
-            'Rugs and fitted carpets',
-            'Vehicle seats and upholstery',
-            'Fabric curtains and blinds',
-          ].map(item => (
-            <div class="flex items-start gap-3 bg-white border border-gray-100 p-4">
-              <svg class="w-4 h-4 text-eco-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <span class="text-gray-700 text-sm">{item}</span>
+            { icon: '💧', title: 'Pre-wash treatment', desc: 'Specialist product applied according to fabric type to loosen dirt and stains.' },
+            { icon: '🔧', title: 'Kärcher extraction', desc: 'Deep cleaning with professional injection and extraction machinery.' },
+            { icon: '✨', title: 'Stain & odour removal', desc: 'Targeted treatment for stubborn stains and ingrained odours.' },
+            { icon: '🛡️', title: 'Antimicrobial disinfection', desc: 'Elimination of mites, bacteria and allergens from the fabric.' },
+            { icon: '💨', title: 'Fast drying', desc: 'Extraction technique that minimises residual moisture for efficient drying.' },
+            { icon: '🌿', title: 'No chemical residues', desc: 'Professional products safe for people, pets and the environment.' },
+          ].map(f => (
+            <div class="bg-white border border-gray-200 p-6">
+              <div class="text-3xl mb-3">{f.icon}</div>
+              <h3 class="font-bold text-gray-900 mb-2">{f.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
-        <div class="mt-8 bg-eco-50 border border-eco-200 p-5">
-          <p class="text-eco-800 text-sm font-medium">
-            We use professional <strong>Kärcher injection and extraction machinery</strong> — the same technology used by industrial cleaning services. Visible results from the very first session.
-          </p>
-        </div>
       </div>
     </section>
 
-    <!-- Prices -->
+    <!-- PRICING -->
     <section class="py-16 md:py-20 bg-white">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="border-l-4 border-eco-600 pl-6 mb-10">
           <span class="text-eco-700 font-semibold text-sm uppercase tracking-widest block mb-2">Indicative rates</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Upholstery cleaning prices</h2>
-          <p class="text-gray-500 mt-3 text-sm">Final price depends on fabric type and condition. Free no-obligation quote.</p>
+          <h2 class="text-3xl font-extrabold text-gray-900">Upholstery cleaning prices</h2>
         </div>
-        <div class="border border-gray-200">
-          <div class="bg-eco-900 text-white px-5 py-3 grid grid-cols-2">
-            <span class="text-xs font-bold uppercase tracking-wider">Item</span>
-            <span class="text-xs font-bold uppercase tracking-wider text-right">Price from</span>
-          </div>
+        <div class="border border-gray-200 overflow-hidden">
+          <div class="bg-eco-900 text-white px-6 py-3 text-sm font-bold uppercase tracking-wider">Indicative price — final price depends on condition and fabric type</div>
           {[
-            { item: '2-seater sofa', price: '€40' },
-            { item: '3-seater sofa', price: '€55' },
-            { item: 'Armchair', price: '€25' },
-            { item: 'Single mattress', price: '€35' },
-            { item: 'Double mattress', price: '€45' },
-            { item: 'Dining chair', price: '€8' },
-          ].map(row => (
-            <div class="flex items-center justify-between px-5 py-3.5 border-b border-gray-100 last:border-0 even:bg-gray-50">
-              <span class="text-sm text-gray-700">{row.item}</span>
-              <span class="text-sm font-bold text-eco-700">from {row.price}</span>
+            { item: '2-seater sofa', price: 'from €40' },
+            { item: '3-seater sofa', price: 'from €55' },
+            { item: 'Armchair', price: 'from €25' },
+            { item: 'Single mattress', price: 'from €35' },
+            { item: 'Double mattress', price: 'from €45' },
+            { item: 'Dining chair', price: 'from €8' },
+          ].map(p => (
+            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors">
+              <span class="text-gray-700">{p.item}</span>
+              <span class="font-bold text-eco-700 ml-4 whitespace-nowrap">{p.price}</span>
             </div>
           ))}
         </div>
-        <p class="text-gray-400 text-xs mt-4">Travel outside Espinosa de los Monteros: +€1/km. VAT not included.</p>
+        <p class="text-gray-400 text-xs mt-4">* Prices may vary depending on condition, dimensions and fabric type. Request a free quote.</p>
       </div>
     </section>
 
-    <!-- Process -->
+    <!-- PROCESS -->
     <section class="py-16 md:py-20 bg-eco-900 text-white">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="border-l-4 border-eco-400 pl-6 mb-12">
-          <span class="text-eco-300 font-semibold text-sm uppercase tracking-widest block mb-2">How we work</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold">3-step cleaning process</h2>
+        <div class="border-l-4 border-eco-500 pl-6 mb-12">
+          <span class="text-eco-400 font-semibold text-sm uppercase tracking-widest block mb-2">How we work</span>
+          <h2 class="text-3xl font-extrabold">The process in 3 steps</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            {
-              step: '01',
-              title: 'Assessment & quote',
-              desc: 'You describe the type of upholstery and its condition. We give you a fixed price with no surprises before we start.',
-            },
-            {
-              step: '02',
-              title: 'Professional treatment',
-              desc: 'We apply fabric-specific pre-wash and use Kärcher injection and extraction machinery for a deep, thorough clean.',
-            },
-            {
-              step: '03',
-              title: 'Drying & handover',
-              desc: 'The upholstery is slightly damp to the touch and fully dry within 2–4 hours. Most stains and odours disappear in a single session.',
-            },
-          ].map(s => (
+            { num: '01', title: 'Contact & quote', desc: 'Call us or message us on WhatsApp. Tell us which pieces need cleaning and we will send you a free, no-obligation quote.' },
+            { num: '02', title: 'Service at your home', desc: 'We come to your home or business in Espinosa de los Monteros or Las Merindades with all our professional machinery.' },
+            { num: '03', title: 'Guaranteed results', desc: 'Your upholstery comes out clean, disinfected and odour-free. If you are not satisfied, we fix it at no extra charge.' },
+          ].map(step => (
             <div class="border border-eco-700 p-6">
-              <span class="text-eco-400 font-black text-4xl block mb-4 font-mono">{s.step}</span>
-              <h3 class="font-bold text-lg mb-3 text-white">{s.title}</h3>
-              <p class="text-eco-200 text-sm leading-relaxed">{s.desc}</p>
+              <div class="text-eco-400 text-4xl font-extrabold mb-4">{step.num}</div>
+              <h3 class="font-bold text-white text-lg mb-3">{step.title}</h3>
+              <p class="text-eco-300 text-sm leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-16 md:py-20 bg-white">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">Does your sofa or mattress need cleaning?</h2>
-        <p class="text-gray-500 mb-8 text-lg">Contact us for a free, no-obligation quote. We serve Espinosa de los Monteros and the entire Las Merindades area.</p>
+    <!-- FINAL CTA -->
+    <section class="py-16 bg-eco-700">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <h2 class="text-3xl font-extrabold mb-4">Ready to get a quote?</h2>
+        <p class="text-eco-100 mb-8">Call us or write on WhatsApp. Available Monday to Friday, 9:00–19:00.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+34605984005"
-            class="inline-flex items-center justify-center gap-2 bg-eco-700 hover:bg-eco-800 text-white px-8 py-4 font-bold text-base transition-colors duration-150">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-            </svg>
-            +34 605 984 005
+          <a href={phone} class="inline-flex items-center justify-center gap-3 bg-white text-eco-900 hover:bg-eco-50 px-8 py-4 font-bold text-base transition-colors duration-150">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call: 605 984 005
           </a>
-          <a href="https://wa.me/34605984005?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto"
-            target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 border-2 border-eco-700 text-eco-700 hover:bg-eco-50 px-8 py-4 font-bold text-base transition-colors duration-150">
+          <a href={whatsapp} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 border-2 border-white text-white hover:bg-eco-800 px-8 py-4 font-bold text-base transition-colors duration-150">
             WhatsApp
           </a>
         </div>
