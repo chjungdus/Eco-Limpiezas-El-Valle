@@ -20,6 +20,8 @@ const labels = {
     case2desc: 'Tratamiento especializado contra moho y humedad en paredes. Resultado visible desde la primera sesión.',
     case3title: 'Tapicería de sofá',
     case3desc: 'Limpieza en profundidad con Kärcher. El tejido recupera su color original y queda libre de ácaros y olores.',
+    case4title: 'Sofá dos plazas',
+    case4desc: 'Otro ejemplo real de tapicería tratada. Aspecto renovado y tejido saneado desde la primera limpieza.',
     ctaLabel: 'Ver todos los servicios',
   },
   en: {
@@ -34,6 +36,8 @@ const labels = {
     case2desc: 'Specialist treatment against mould and damp on walls. Visible results from the first session.',
     case3title: 'Sofa upholstery',
     case3desc: 'Deep cleaning with Kärcher. The fabric recovers its original colour and is free of dust mites and odours.',
+    case4title: 'Two-seater sofa',
+    case4desc: 'Another real example of treated upholstery. Renewed look and sanitised fabric from the very first clean.',
     ctaLabel: 'See all services',
   },
   de: {
@@ -48,6 +52,8 @@ const labels = {
     case2desc: 'Fachgerechte Behandlung gegen Schimmel und Feuchtigkeit an Wänden. Sichtbares Ergebnis ab der ersten Sitzung.',
     case3title: 'Sofa-Polsterreinigung',
     case3desc: 'Tiefenreinigung mit Kärcher. Der Stoff erhält seine ursprüngliche Farbe zurück und ist frei von Milben und Gerüchen.',
+    case4title: 'Zweisitzer-Sofa',
+    case4desc: 'Ein weiteres echtes Beispiel behandelter Polster. Erneuertes Aussehen und hygienisch gereinigter Stoff.',
     ctaLabel: 'Alle Dienste ansehen',
   },
 };
@@ -64,7 +70,7 @@ const l = labels[lang];
       <p class="text-lg text-gray-500 max-w-2xl mx-auto">{l.subtitle}</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
 
       <!-- Case 1: Ceiling (featured) -->
       <div class="bg-white border border-gray-200 overflow-hidden">
@@ -153,6 +159,36 @@ const l = labels[lang];
         <div class="px-6 py-5 border-t border-gray-100">
           <h3 class="font-bold text-gray-900 text-lg mb-1">{l.case3title}</h3>
           <p class="text-gray-500 text-sm">{l.case3desc}</p>
+        </div>
+      </div>
+
+      <!-- Case 4: Sofa 2 -->
+      <div class="bg-white border border-gray-200 overflow-hidden">
+        <div class="grid grid-cols-2">
+          <div class="relative">
+            <img
+              src={`${base}/images/sofa2-antes.jpeg`}
+              alt={`${l.before}: ${l.case4title}`}
+              class="w-full aspect-[3/4] object-cover object-center"
+            />
+            <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+              {l.before}
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src={`${base}/images/sofa2-despues.jpeg`}
+              alt={`${l.after}: ${l.case4title}`}
+              class="w-full aspect-[3/4] object-cover object-center"
+            />
+            <div class="absolute top-3 right-3 bg-eco-600 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+              {l.after}
+            </div>
+          </div>
+        </div>
+        <div class="px-6 py-5 border-t border-gray-100">
+          <h3 class="font-bold text-gray-900 text-lg mb-1">{l.case4title}</h3>
+          <p class="text-gray-500 text-sm">{l.case4desc}</p>
         </div>
       </div>
 
